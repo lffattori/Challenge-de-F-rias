@@ -51,9 +51,15 @@
 		25345BDB22E0E67800CF0513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25345BDA22E0E67800CF0513 /* Assets.xcassets */; };
 		25345BDD22E0ECFC00CF0513 /* ViewControllerIncio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25345BDC22E0ECFB00CF0513 /* ViewControllerIncio.swift */; };
 		25345BDF22E1047B00CF0513 /* ViewControllerQuebraDeImpulso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25345BDE22E1047B00CF0513 /* ViewControllerQuebraDeImpulso.swift */; };
+		25432F7622E2518400BD4C00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25432F7522E2518400BD4C00 /* ViewController.swift */; };
+		25432F7822E25EB900BD4C00 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25432F7722E25EB800BD4C00 /* Tutorial.storyboard */; };
+		25432F7A22E25FCC00BD4C00 /* ViewControllerTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25432F7922E25FCC00BD4C00 /* ViewControllerTutorial.swift */; };
+		25432F7C22E2608700BD4C00 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25432F7B22E2608700BD4C00 /* PageViewController.swift */; };
 		255BC1FE22E10DC300B3E7FC /* ViewControllerHistoricoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255BC1FD22E10DC300B3E7FC /* ViewControllerHistoricoPage.swift */; };
+		255BC21222E115D100B3E7FC /* EsquerdaParaDireita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255BC21122E115D100B3E7FC /* EsquerdaParaDireita.swift */; };
+		255BC21522E2396C00B3E7FC /* TableViewControllerHistorico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255BC21422E2396C00B3E7FC /* TableViewControllerHistorico.swift */; };
+		255BC21722E23C2C00B3E7FC /* TableViewCellCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255BC21622E23C2C00B3E7FC /* TableViewCellCard.swift */; };
 		25BEA03422DE33910025B854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BEA03322DE33910025B854 /* AppDelegate.swift */; };
-		25BEA03622DE33910025B854 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BEA03522DE33910025B854 /* ViewController.swift */; };
 		25BEA03922DE33910025B854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25BEA03722DE33910025B854 /* Main.storyboard */; };
 		25BEA03C22DE33910025B854 /* SemConsumismo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25BEA03A22DE33910025B854 /* SemConsumismo.xcdatamodeld */; };
 		25BEA04122DE33930025B854 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25BEA03F22DE33930025B854 /* LaunchScreen.storyboard */; };
@@ -123,10 +129,17 @@
 		25345BDA22E0E67800CF0513 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25345BDC22E0ECFB00CF0513 /* ViewControllerIncio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerIncio.swift; sourceTree = "<group>"; };
 		25345BDE22E1047B00CF0513 /* ViewControllerQuebraDeImpulso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerQuebraDeImpulso.swift; sourceTree = "<group>"; };
+		25432F7522E2518400BD4C00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		25432F7722E25EB800BD4C00 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		25432F7922E25FCC00BD4C00 /* ViewControllerTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTutorial.swift; sourceTree = "<group>"; };
+		25432F7B22E2608700BD4C00 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		255BC1FD22E10DC300B3E7FC /* ViewControllerHistoricoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHistoricoPage.swift; sourceTree = "<group>"; };
+		255BC21122E115D100B3E7FC /* EsquerdaParaDireita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsquerdaParaDireita.swift; sourceTree = "<group>"; };
+		255BC21322E116BE00B3E7FC /* SemConsumismo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SemConsumismo-Bridging-Header.h"; sourceTree = "<group>"; };
+		255BC21422E2396C00B3E7FC /* TableViewControllerHistorico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerHistorico.swift; sourceTree = "<group>"; };
+		255BC21622E23C2C00B3E7FC /* TableViewCellCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellCard.swift; sourceTree = "<group>"; };
 		25BEA03022DE33910025B854 /* SemConsumismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SemConsumismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25BEA03322DE33910025B854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		25BEA03522DE33910025B854 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		25BEA03822DE33910025B854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		25BEA03B22DE33910025B854 /* SemConsumismo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SemConsumismo.xcdatamodel; sourceTree = "<group>"; };
 		25BEA04022DE33930025B854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -233,9 +246,15 @@
 		25BEA03222DE33910025B854 /* SemConsumismo */ = {
 			isa = PBXGroup;
 			children = (
+				25432F7522E2518400BD4C00 /* ViewController.swift */,
 				25BEA03322DE33910025B854 /* AppDelegate.swift */,
-				25BEA03522DE33910025B854 /* ViewController.swift */,
 				25BEA03722DE33910025B854 /* Main.storyboard */,
+				25432F7722E25EB800BD4C00 /* Tutorial.storyboard */,
+				25432F7B22E2608700BD4C00 /* PageViewController.swift */,
+				25432F7922E25FCC00BD4C00 /* ViewControllerTutorial.swift */,
+				255BC21622E23C2C00B3E7FC /* TableViewCellCard.swift */,
+				255BC21422E2396C00B3E7FC /* TableViewControllerHistorico.swift */,
+				255BC21122E115D100B3E7FC /* EsquerdaParaDireita.swift */,
 				255BC1FD22E10DC300B3E7FC /* ViewControllerHistoricoPage.swift */,
 				25345BDE22E1047B00CF0513 /* ViewControllerQuebraDeImpulso.swift */,
 				25345BDC22E0ECFB00CF0513 /* ViewControllerIncio.swift */,
@@ -245,6 +264,7 @@
 				25BEA04222DE33930025B854 /* Info.plist */,
 				25345BDA22E0E67800CF0513 /* Assets.xcassets */,
 				25BEA03A22DE33910025B854 /* SemConsumismo.xcdatamodeld */,
+				255BC21322E116BE00B3E7FC /* SemConsumismo-Bridging-Header.h */,
 				25345B8D22DFACFF00CF0513 /* montserrat */,
 			);
 			path = SemConsumismo;
@@ -394,6 +414,7 @@
 				25345BB522DFACFF00CF0513 /* Montserrat-BlackItalic.otf in Resources */,
 				25345BC522DFACFF00CF0513 /* Montserrat-Medium.otf in Resources */,
 				25345BC222DFACFF00CF0513 /* MontserratAlternates-ExtraLightItalic.otf in Resources */,
+				25432F7822E25EB900BD4C00 /* Tutorial.storyboard in Resources */,
 				25345BD522DFACFF00CF0513 /* MontserratAlternates-ExtraBoldItalic.otf in Resources */,
 				25345BB822DFACFF00CF0513 /* MontserratAlternates-LightItalic.otf in Resources */,
 				25345BC922DFACFF00CF0513 /* Montserrat-Italic.otf in Resources */,
@@ -437,16 +458,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25432F7A22E25FCC00BD4C00 /* ViewControllerTutorial.swift in Sources */,
 				25345B3F22DF9C7400CF0513 /* Reflexoes+CoreDataProperties.swift in Sources */,
-				25BEA03622DE33910025B854 /* ViewController.swift in Sources */,
 				255BC1FE22E10DC300B3E7FC /* ViewControllerHistoricoPage.swift in Sources */,
 				25345B3E22DF9C7400CF0513 /* Reflexoes+CoreDataClass.swift in Sources */,
+				255BC21522E2396C00B3E7FC /* TableViewControllerHistorico.swift in Sources */,
 				25345BDF22E1047B00CF0513 /* ViewControllerQuebraDeImpulso.swift in Sources */,
+				25432F7C22E2608700BD4C00 /* PageViewController.swift in Sources */,
 				25BEA03C22DE33910025B854 /* SemConsumismo.xcdatamodeld in Sources */,
 				25345B4122DF9CF900CF0513 /* ViewControllerInfo.swift in Sources */,
 				25345BDD22E0ECFC00CF0513 /* ViewControllerIncio.swift in Sources */,
+				25432F7622E2518400BD4C00 /* ViewController.swift in Sources */,
 				25BEA03422DE33910025B854 /* AppDelegate.swift in Sources */,
+				255BC21222E115D100B3E7FC /* EsquerdaParaDireita.swift in Sources */,
 				25345BD922E0E61C00CF0513 /* ViewControllerRespostas.swift in Sources */,
+				255BC21722E23C2C00B3E7FC /* TableViewCellCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

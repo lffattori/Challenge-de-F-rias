@@ -9,18 +9,22 @@
 import UIKit
 
 class ViewControllerIncio: UIViewController {
-    var acesso:Bool = false
-
-    override func viewDidAppear(_ animated: Bool) {
-        if !acesso {
-            let storyboard = UIStoryboard(name: "Tutorial", bundle: nil)
-            if let tutorial = storyboard.instantiateViewController(withIdentifier: "tutorial")
-                as? ViewControllerTutorial{
-                present(tutorial, animated: true, completion: nil)
-            }
-            acesso = true
-        }
+    @IBAction func naoBotao(_ sender: Any) {
     }
+    @IBOutlet weak var lblDinheiroNaoGasto: UILabel!
+    @IBOutlet weak var plantinha: UIImageView!
+    //    var acesso:Bool = false
+//
+//    override func viewDidAppear(_ animated: Bool) {
+//        if !acesso {
+//            let storyboard = UIStoryboard(name: "Tutorial", bundle: nil)
+//            if let tutorial = storyboard.instantiateViewController(withIdentifier: "tutorial")
+//                as? ViewControllerTutorial{
+//                present(tutorial, animated: true, completion: nil)
+//            }
+//            acesso = true
+//        }
+//    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

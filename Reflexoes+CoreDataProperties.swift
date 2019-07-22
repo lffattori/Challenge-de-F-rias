@@ -2,7 +2,7 @@
 //  Reflexoes+CoreDataProperties.swift
 //  SemConsumismo
 //
-//  Created by Luiza Fattori on 17/07/19.
+//  Created by Luiza Fattori on 19/07/19.
 //  Copyright © 2019 Luiza Fattori. All rights reserved.
 //
 //
@@ -17,7 +17,7 @@ extension Reflexoes {
         return NSFetchRequest<Reflexoes>(entityName: "Reflexoes")
     }
 
-    @NSManaged public var valor: String?
     @NSManaged public var reflexao: String?
+    @NSManaged public var valor: Double
 
 }

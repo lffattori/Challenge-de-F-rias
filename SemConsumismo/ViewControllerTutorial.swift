@@ -10,6 +10,7 @@ import UIKit
 
 class ViewControllerTutorial: UIViewController {
     var pageViewController: PageViewController?
+    
     @IBOutlet weak var botaoProx: UIButton!
     @IBOutlet weak var botaoVoltar: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -32,8 +33,10 @@ class ViewControllerTutorial: UIViewController {
             switch index {
             case 0:
                 pageViewController?.avancarPagina()
+                print ("Clicou")
             case 1:
                 dismiss(animated: true, completion: nil)
+                print ("Sumiu")
             default:
                 break
             }

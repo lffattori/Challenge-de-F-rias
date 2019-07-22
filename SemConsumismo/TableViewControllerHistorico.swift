@@ -15,10 +15,9 @@ class TableViewControllerHistorico: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        puxaDados()
         context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        tableView.dataSource = self
-        tableView.delegate = self
+        puxaDados()
+        print(historicoInfo.count)
     }
     
     func puxaDados(){
@@ -33,14 +32,21 @@ class TableViewControllerHistorico: UITableViewController{
     }
 
     // MARK: - Table view data source
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        print("passou 1")
+        return 1
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celula = tableView.dequeueReusableCell(withIdentifier: "card") as! TableViewCellCard
-        celula.valor.text = historicoInfo[indexPath.row].valor
-        celula.reflexao.text = historicoInfo[indexPath.row].reflexao
+        let celula = tableView.dequeueReusableCell(withIdentifier: "Card") as! ReflexaoTableViewCell
+        celula.valor.text = String(historicoInfo[indexPath.row].valor)
+        celula.reflexoes.text = historicoInfo[indexPath.row].reflexao
+        print("passou do 3")
         return celula
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("passou 2")
         return historicoInfo.count
     }
 

@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     private var pageControl:UIPageControl{
         let pc = UIPageControl()
         pc.currentPage = 0
-        pc.numberOfPages = 3
+        pc.numberOfPages = 2
         
         return pc
     }

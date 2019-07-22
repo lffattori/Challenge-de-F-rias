@@ -58,7 +58,10 @@
 		255BC1FE22E10DC300B3E7FC /* ViewControllerHistoricoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255BC1FD22E10DC300B3E7FC /* ViewControllerHistoricoPage.swift */; };
 		255BC21222E115D100B3E7FC /* EsquerdaParaDireita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255BC21122E115D100B3E7FC /* EsquerdaParaDireita.swift */; };
 		255BC21522E2396C00B3E7FC /* TableViewControllerHistorico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255BC21422E2396C00B3E7FC /* TableViewControllerHistorico.swift */; };
-		255BC21722E23C2C00B3E7FC /* TableViewCellCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255BC21622E23C2C00B3E7FC /* TableViewCellCard.swift */; };
+		258551E622E2A867005AE6E9 /* ReflexaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258551E522E2A867005AE6E9 /* ReflexaoTableViewCell.swift */; };
+		259A4C1D22E631FD000596BD /* ValorDiario+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FE73FB22E630C0009FAEB0 /* ValorDiario+CoreDataProperties.swift */; };
+		259A4C1E22E63200000596BD /* ValorDiario+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FE73FA22E630C0009FAEB0 /* ValorDiario+CoreDataClass.swift */; };
+		25B5CDD722E6121000089DAA /* ConfiguracoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5CDD622E6121000089DAA /* ConfiguracoesViewController.swift */; };
 		25BEA03422DE33910025B854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BEA03322DE33910025B854 /* AppDelegate.swift */; };
 		25BEA03922DE33910025B854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25BEA03722DE33910025B854 /* Main.storyboard */; };
 		25BEA03C22DE33910025B854 /* SemConsumismo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25BEA03A22DE33910025B854 /* SemConsumismo.xcdatamodeld */; };
@@ -135,9 +138,9 @@
 		25432F7B22E2608700BD4C00 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		255BC1FD22E10DC300B3E7FC /* ViewControllerHistoricoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHistoricoPage.swift; sourceTree = "<group>"; };
 		255BC21122E115D100B3E7FC /* EsquerdaParaDireita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsquerdaParaDireita.swift; sourceTree = "<group>"; };
-		255BC21322E116BE00B3E7FC /* SemConsumismo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SemConsumismo-Bridging-Header.h"; sourceTree = "<group>"; };
 		255BC21422E2396C00B3E7FC /* TableViewControllerHistorico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerHistorico.swift; sourceTree = "<group>"; };
-		255BC21622E23C2C00B3E7FC /* TableViewCellCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellCard.swift; sourceTree = "<group>"; };
+		258551E522E2A867005AE6E9 /* ReflexaoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflexaoTableViewCell.swift; sourceTree = "<group>"; };
+		25B5CDD622E6121000089DAA /* ConfiguracoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfiguracoesViewController.swift; path = ../ConfiguracoesViewController.swift; sourceTree = "<group>"; };
 		25BEA03022DE33910025B854 /* SemConsumismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SemConsumismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25BEA03322DE33910025B854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25BEA03822DE33910025B854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 		25BEA05222DE33930025B854 /* SemConsumismoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SemConsumismoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25BEA05622DE33930025B854 /* SemConsumismoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemConsumismoUITests.swift; sourceTree = "<group>"; };
 		25BEA05822DE33930025B854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25FE73FA22E630C0009FAEB0 /* ValorDiario+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValorDiario+CoreDataClass.swift"; sourceTree = "<group>"; };
+		25FE73FB22E630C0009FAEB0 /* ValorDiario+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValorDiario+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +229,9 @@
 		25BEA02722DE33910025B854 = {
 			isa = PBXGroup;
 			children = (
+				25FE73FA22E630C0009FAEB0 /* ValorDiario+CoreDataClass.swift */,
+				25FE73FB22E630C0009FAEB0 /* ValorDiario+CoreDataProperties.swift */,
+				258551E522E2A867005AE6E9 /* ReflexaoTableViewCell.swift */,
 				25345B3C22DF9C7400CF0513 /* Reflexoes+CoreDataClass.swift */,
 				25345B3D22DF9C7400CF0513 /* Reflexoes+CoreDataProperties.swift */,
 				25BEA03222DE33910025B854 /* SemConsumismo */,
@@ -246,13 +254,13 @@
 		25BEA03222DE33910025B854 /* SemConsumismo */ = {
 			isa = PBXGroup;
 			children = (
+				25B5CDD622E6121000089DAA /* ConfiguracoesViewController.swift */,
 				25432F7522E2518400BD4C00 /* ViewController.swift */,
-				25BEA03322DE33910025B854 /* AppDelegate.swift */,
 				25BEA03722DE33910025B854 /* Main.storyboard */,
 				25432F7722E25EB800BD4C00 /* Tutorial.storyboard */,
 				25432F7B22E2608700BD4C00 /* PageViewController.swift */,
+				25BEA03322DE33910025B854 /* AppDelegate.swift */,
 				25432F7922E25FCC00BD4C00 /* ViewControllerTutorial.swift */,
-				255BC21622E23C2C00B3E7FC /* TableViewCellCard.swift */,
 				255BC21422E2396C00B3E7FC /* TableViewControllerHistorico.swift */,
 				255BC21122E115D100B3E7FC /* EsquerdaParaDireita.swift */,
 				255BC1FD22E10DC300B3E7FC /* ViewControllerHistoricoPage.swift */,
@@ -264,7 +272,6 @@
 				25BEA04222DE33930025B854 /* Info.plist */,
 				25345BDA22E0E67800CF0513 /* Assets.xcassets */,
 				25BEA03A22DE33910025B854 /* SemConsumismo.xcdatamodeld */,
-				255BC21322E116BE00B3E7FC /* SemConsumismo-Bridging-Header.h */,
 				25345B8D22DFACFF00CF0513 /* montserrat */,
 			);
 			path = SemConsumismo;
@@ -458,21 +465,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				259A4C1D22E631FD000596BD /* ValorDiario+CoreDataProperties.swift in Sources */,
+				258551E622E2A867005AE6E9 /* ReflexaoTableViewCell.swift in Sources */,
 				25432F7A22E25FCC00BD4C00 /* ViewControllerTutorial.swift in Sources */,
 				25345B3F22DF9C7400CF0513 /* Reflexoes+CoreDataProperties.swift in Sources */,
 				255BC1FE22E10DC300B3E7FC /* ViewControllerHistoricoPage.swift in Sources */,
 				25345B3E22DF9C7400CF0513 /* Reflexoes+CoreDataClass.swift in Sources */,
+				259A4C1E22E63200000596BD /* ValorDiario+CoreDataClass.swift in Sources */,
 				255BC21522E2396C00B3E7FC /* TableViewControllerHistorico.swift in Sources */,
 				25345BDF22E1047B00CF0513 /* ViewControllerQuebraDeImpulso.swift in Sources */,
 				25432F7C22E2608700BD4C00 /* PageViewController.swift in Sources */,
 				25BEA03C22DE33910025B854 /* SemConsumismo.xcdatamodeld in Sources */,
+				25B5CDD722E6121000089DAA /* ConfiguracoesViewController.swift in Sources */,
 				25345B4122DF9CF900CF0513 /* ViewControllerInfo.swift in Sources */,
 				25345BDD22E0ECFC00CF0513 /* ViewControllerIncio.swift in Sources */,
 				25432F7622E2518400BD4C00 /* ViewController.swift in Sources */,
 				25BEA03422DE33910025B854 /* AppDelegate.swift in Sources */,
 				255BC21222E115D100B3E7FC /* EsquerdaParaDireita.swift in Sources */,
 				25345BD922E0E61C00CF0513 /* ViewControllerRespostas.swift in Sources */,
-				255BC21722E23C2C00B3E7FC /* TableViewCellCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,7 +667,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luizafattori.SemConsumismo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SemConsumismo/SemConsumismo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -678,7 +687,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luizafattori.SemConsumismo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SemConsumismo/SemConsumismo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -17,7 +17,9 @@ class ViewControllerInfo: UIViewController {
         }
         let registro = NSEntityDescription.insertNewObject(forEntityName: "Reflexoes", into: context) as! Reflexoes
         registro.reflexao = campoReflexao.text
-        registro.valor = campoValor.text
+        if let d = Double(campoValor.text!) {
+            registro.valor = d
+        }
         navigationController?.popViewController(animated: true)
         print ("clicked")
         do {

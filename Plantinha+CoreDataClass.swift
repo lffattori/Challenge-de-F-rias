@@ -1,5 +1,5 @@
 //
-//  Reflexoes+CoreDataClass.swift
+//  Plantinha+CoreDataClass.swift
 //  SemConsumismo
 //
 //  Created by Luiza Fattori on 22/07/19.
@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 
-public class Reflexoes: NSManagedObject {
-
+public class Plantinha: NSManagedObject {
+    
 }

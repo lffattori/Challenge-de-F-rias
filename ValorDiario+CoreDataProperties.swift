@@ -18,5 +18,6 @@ extension ValorDiario {
     }
 
     @NSManaged public var valorDinheiro: Double
+    @NSManaged public var valorTotal: Double
 
 }

@@ -15,31 +15,32 @@ class ViewControllerIncio: UIViewController {
     var dinheiroTotal:Double? = 0.0
     var gastoDiario:Double? = 0.0
     
-    var plantinhaEstado: String? {
+    var plantinhaEstado: Int32? {
         didSet {
             switch plantinhaEstado {
-            case "estado 1":
+            case 1:
                 plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha1")
-            case "estado 2":
+            case 2:
                 plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 2")
-            case "estado 3":
+            case 3:
                 plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 3")
-            case "estado 4":
+            case 4:
                 plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 4")
-            case "estado 5":
+            case 5:
                 plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 5")
-            case "estado 6":
+            case 6:
                 plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 6")
-            case "estado 7":
+            case 7:
                 plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 7")
-            case "estado 8":
+            case 8:
                 plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 7")
-            case "estado 9":
+            case 9:
                 plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 9")
-            case "estado 10":
+            case 10:
                 plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 10")
             default:
                 plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha1")
+                plantinhaEstado = Int32(1)
             }
         }
     }
@@ -48,16 +49,12 @@ class ViewControllerIncio: UIViewController {
     var plantinha: Plantinha?
     
     @IBAction func naoBotao(_ sender: Any) {
-        
-//        let valor = 100.0
-//        dinheiro = dinheiro + valor
-//        lblDinheiroNaoGasto.text = "\(dinheiro)"
-//        dinheiroTotal += gastoDiario
+        let aux = Int(plantinhaEstado!)
+        plantinhaEstado = Int32(aux + 1)
         valorDiario?.valorTotal += gastoDiario ?? 0
         lblDinheiroNaoGasto.text = String(valorDiario?.valorTotal ?? 0)
-        print(valorDiario?.valorTotal)
-        print(gastoDiario)
         lblDinheiroNaoGasto.reloadInputViews()
+        
         
     }
     @IBOutlet weak var lblDinheiroNaoGasto: UILabel!
@@ -74,25 +71,15 @@ class ViewControllerIncio: UIViewController {
 //            acesso = true
 //        }
 //    }
-    
-//    func puxarDados(){
-//        do {
-//            guard let context = context else {return}
-//            let result = try context.fetch(ValorDiario.fetchRequest())
-//            print(result)
-////            gastoDiario = gd.valorDinheiro
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//    }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         loadData()
-        print(gastoDiario)
-        print(dinheiroTotal)
+        lblDinheiroNaoGasto.text = String(valorDiario?.valorTotal ?? 0)
+        lblDinheiroNaoGasto.reloadInputViews()
         if(plantinhaEstado == nil){
-            plantinhaEstado = "estado 1"
+            plantinhaEstado = Int32(1)
         }
         updateData()
         // Do any additional setup after loading the view.
@@ -103,11 +90,10 @@ class ViewControllerIncio: UIViewController {
     }
     func updateData(){
         dinheiroTotal = valorDiario?.valorTotal
-        print(plantinha)
         if plantinha?.estado != nil {
             plantinhaEstado = plantinha?.estado
         }else{
-            plantinhaEstado = "estado 1"
+            plantinhaEstado = Int32(1)
         }
     }
 

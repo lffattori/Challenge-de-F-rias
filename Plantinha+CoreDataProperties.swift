@@ -2,7 +2,7 @@
 //  Plantinha+CoreDataProperties.swift
 //  SemConsumismo
 //
-//  Created by Luiza Fattori on 22/07/19.
+//  Created by Luiza Fattori on 23/07/19.
 //  Copyright © 2019 Luiza Fattori. All rights reserved.
 //
 //
@@ -17,6 +17,6 @@ extension Plantinha {
         return NSFetchRequest<Plantinha>(entityName: "Plantinha")
     }
 
-    @NSManaged public var estado: String?
+    @NSManaged public var estado: Int32
 
 }

@@ -29,15 +29,16 @@ class ViewControllerIncio: UIViewController {
             case 5:
                 plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 5")
             case 6:
-                plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 6")
+                plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 6 - 1")
             case 7:
-                plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 7")
+                plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 7 - 1")
             case 8:
-                plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 7")
+                plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 8 - 1")
             case 9:
-                plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 9")
+                plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 9 - 1")
             case 10:
                 plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 10")
+//                context?.fetch(NSFetchRequest<quantidade>) as! PlantinhasCrescidas
             default:
                 plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha1")
                 plantinhaEstado = Int32(1)

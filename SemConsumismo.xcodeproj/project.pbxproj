@@ -65,6 +65,7 @@
 		259A4C3722E6582F000596BD /* Reflexoes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259A4C2F22E6582F000596BD /* Reflexoes+CoreDataProperties.swift */; };
 		259A4C3822E6582F000596BD /* ValorDiario+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259A4C3022E6582F000596BD /* ValorDiario+CoreDataClass.swift */; };
 		259A4C3922E6582F000596BD /* ValorDiario+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259A4C3122E6582F000596BD /* ValorDiario+CoreDataProperties.swift */; };
+		259A4C3B22E8F970000596BD /* PlantinhaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259A4C3A22E8F970000596BD /* PlantinhaCollectionViewController.swift */; };
 		25B5CDD722E6121000089DAA /* ConfiguracoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5CDD622E6121000089DAA /* ConfiguracoesViewController.swift */; };
 		25BEA03422DE33910025B854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BEA03322DE33910025B854 /* AppDelegate.swift */; };
 		25BEA03922DE33910025B854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25BEA03722DE33910025B854 /* Main.storyboard */; };
@@ -142,6 +143,7 @@
 		259A4C2F22E6582F000596BD /* Reflexoes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reflexoes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		259A4C3022E6582F000596BD /* ValorDiario+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValorDiario+CoreDataClass.swift"; sourceTree = "<group>"; };
 		259A4C3122E6582F000596BD /* ValorDiario+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValorDiario+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		259A4C3A22E8F970000596BD /* PlantinhaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantinhaCollectionViewController.swift; sourceTree = "<group>"; };
 		25B5CDD622E6121000089DAA /* ConfiguracoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracoesViewController.swift; sourceTree = "<group>"; };
 		25BEA03022DE33910025B854 /* SemConsumismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SemConsumismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25BEA03322DE33910025B854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				25B5CDD622E6121000089DAA /* ConfiguracoesViewController.swift */,
+				259A4C3A22E8F970000596BD /* PlantinhaCollectionViewController.swift */,
 				25432F7522E2518400BD4C00 /* ViewController.swift */,
 				25432F7B22E2608700BD4C00 /* PageViewController.swift */,
 				25BEA03322DE33910025B854 /* AppDelegate.swift */,
@@ -436,6 +439,7 @@
 				25345BDF22E1047B00CF0513 /* ViewControllerQuebraDeImpulso.swift in Sources */,
 				25432F7C22E2608700BD4C00 /* PageViewController.swift in Sources */,
 				259A4C3622E6582F000596BD /* Reflexoes+CoreDataClass.swift in Sources */,
+				259A4C3B22E8F970000596BD /* PlantinhaCollectionViewController.swift in Sources */,
 				25BEA03C22DE33910025B854 /* SemConsumismo.xcdatamodeld in Sources */,
 				259A4C3522E6582F000596BD /* PlantinhasCrescidas+CoreDataProperties.swift in Sources */,
 				25B5CDD722E6121000089DAA /* ConfiguracoesViewController.swift in Sources */,

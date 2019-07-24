@@ -22,16 +22,20 @@ public class ReflexaoTableViewCell:UITableViewCell{
         }
     }
     
+//    public override func awakeFromNib() {
+//        self.layer.cornerRadius = 20
+//        self.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+//        self.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+//    }
 }
 
 public class CardView:UIView {
     @IBOutlet var lblReflexoes:UILabel!
     @IBOutlet var lblValor:UILabel!
     
+    
     public override func awakeFromNib() {
-        self.layer.cornerRadius = 20
-        self.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        self.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        
+        self.layer.cornerRadius = 10
+        self.backgroundColor = #colorLiteral(red: 0.9177484512, green: 0.9122928977, blue: 0.9219421744, alpha: 0)
     }
 }

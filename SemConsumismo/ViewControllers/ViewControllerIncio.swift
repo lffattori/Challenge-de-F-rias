@@ -50,11 +50,18 @@ class ViewControllerIncio: UIViewController {
     
     @IBAction func naoBotao(_ sender: Any) {
         let aux = Int(plantinhaEstado!)
+        if valorDiario == nil {
+            let alert = UIAlertController (title: "Atenção", message: "Você ainda não tem nenhum valor salvo. Vá nas configurações ⚙️ e coloque o quanto você gasta por dia ", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(oktapped) in self.dismiss(animated: true, completion: nil)}))
+            self.present(alert, animated: true, completion: nil)
+        } else {
         plantinhaEstado = Int32(aux + 1)
         valorDiario?.valorTotal += gastoDiario ?? 0
+        self.dinheiroTotal = valorDiario?.valorTotal ?? 0
         lblDinheiroNaoGasto.text = String(valorDiario?.valorTotal ?? 0)
         lblDinheiroNaoGasto.reloadInputViews()
-        
+        self.saveData()
+        }
         
     }
     @IBOutlet weak var lblDinheiroNaoGasto: UILabel!
@@ -80,6 +87,8 @@ class ViewControllerIncio: UIViewController {
         lblDinheiroNaoGasto.reloadInputViews()
         if(plantinhaEstado == nil){
             plantinhaEstado = Int32(1)
+        } else {
+            plantinhaEstado = plantinha?.estado
         }
         updateData()
         // Do any additional setup after loading the view.
@@ -92,7 +101,7 @@ class ViewControllerIncio: UIViewController {
         dinheiroTotal = valorDiario?.valorTotal
         if plantinha?.estado != nil {
             plantinhaEstado = plantinha?.estado
-        }else{
+        } else {
             plantinhaEstado = Int32(1)
         }
     }
@@ -101,11 +110,12 @@ class ViewControllerIncio: UIViewController {
         var request = NSFetchRequest<NSFetchRequestResult>(entityName: "ValorDiario")
         request.returnsObjectsAsFaults = false
         if let context = context{
-            do{
+            do {
                 let result = try context.fetch(request)
                 let data = result.last as? NSManagedObject
                 valorDiario = data as? ValorDiario
                 gastoDiario = valorDiario?.value(forKey: "valorDinheiro") as? Double
+                dinheiroTotal = valorDiario?.value(forKey: "valorTotal") as? Double
 //                valorDiario = result.last as? ValorDiario
 //                for data in result as! [NSManagedObject] {
 ////                    gastoDiario = data.value(forKey: "valorDinheiro") as! Double
@@ -120,25 +130,51 @@ class ViewControllerIncio: UIViewController {
         request = NSFetchRequest<NSFetchRequestResult>(entityName: "Plantinha")
         request.returnsObjectsAsFaults = false
         if let context = context{
-            do{
+            do {
                 let result = try context.fetch(request)
                 for data in result as! [NSManagedObject] {
                     //                    print(data.value(forKey: "valorDinheiro"))
 //                    plantinhaEstado = data.value(forKey: "estado") as? String
                     plantinha = data as? Plantinha
                 }
-            }catch{
+            } catch {
                 fatalError("404 - Plantinha: Entity not found!")
             }
         }
-        if plantinha == nil{
-            plantinha = NSEntityDescription.insertNewObject(forEntityName: "Plantinha", into: context!) as? Plantinha
-        }
+//        if plantinha == nil{
+//            plantinha = NSEntityDescription.insertNewObject(forEntityName: "Plantinha", into: context!) as? Plantinha
+//        }
         
         updateData()
     }
     
     func saveData(){
+        guard let context = context else {
+            return
+        }
+            let registro = NSEntityDescription.insertNewObject(forEntityName: "ValorDiario", into: context) as! ValorDiario
+            print(registro)
+            registro.valorTotal = dinheiroTotal ?? 0
+        registro.valorDinheiro = gastoDiario ?? 0
+            print ("clicked")
+            do {
+                try context.save()
+                print("salvo")
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
         
+        let registroPlanta = NSEntityDescription.insertNewObject(forEntityName: "Plantinha", into: context) as! Plantinha
+        print(registroPlanta)
+        registroPlanta.estado = self.plantinhaEstado ?? 1
+        print ("clicked")
+        do {
+            try context.save()
+            print("salvo")
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
     }
 }

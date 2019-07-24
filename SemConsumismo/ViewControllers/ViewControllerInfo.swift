@@ -39,6 +39,9 @@ class ViewControllerInfo: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func botaoCancelar(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     
 

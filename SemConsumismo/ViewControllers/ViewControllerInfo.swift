@@ -9,8 +9,9 @@
 import UIKit
 import CoreData
 
-class ViewControllerInfo: UIViewController {
-    @IBOutlet weak var campoReflexao: UITextField!
+class ViewControllerInfo: UIViewController, UITextViewDelegate {
+    
+    @IBOutlet weak var campoReflexao: UITextView!
     @IBAction func salvar(_ sender: Any) {
         guard let context = context else {
             return
@@ -33,26 +34,30 @@ class ViewControllerInfo: UIViewController {
     }
     @IBOutlet weak var campoValor: UITextField!
     var context:NSManagedObjectContext?
+    
     override func viewDidLoad() {
+        campoReflexao.delegate = self
+        campoReflexao.text = "Insira aqui sua reflexão"
+        campoReflexao.textColor = .lightGray
         context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     @IBAction func botaoCancelar(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if campoReflexao.textColor == UIColor.lightGray {
+            campoReflexao.text = nil
+            campoReflexao.textColor = #colorLiteral(red: 0.4391747117, green: 0.4392418861, blue: 0.4391601086, alpha: 1)
+        }
     }
-    */
-
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if campoReflexao.text.isEmpty {
+            campoReflexao.text = "Insira aqui a sua reflexão"
+            campoReflexao.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        }
+    }
 }

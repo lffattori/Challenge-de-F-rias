@@ -3,9 +3,6 @@
     <entity name="Plantinha" representedClassName=".Plantinha" syncable="YES">
         <attribute name="estado" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="PlantinhasCrescidas" representedClassName=".PlantinhasCrescidas" syncable="YES">
-        <attribute name="quantidade" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-    </entity>
     <entity name="Reflexoes" representedClassName=".Reflexoes" syncable="YES">
         <attribute name="reflexao" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="valor" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -16,7 +13,6 @@
     </entity>
     <elements>
         <element name="Plantinha" positionX="-63" positionY="9" width="128" height="60"/>
-        <element name="PlantinhasCrescidas" positionX="-54" positionY="18" width="128" height="60"/>
         <element name="Reflexoes" positionX="-63" positionY="-18" width="128" height="75"/>
         <element name="ValorDiario" positionX="-63" positionY="0" width="128" height="75"/>
     </elements>

@@ -39,6 +39,9 @@ class ViewControllerIncio: UIViewController {
             case 10:
                 plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 10")
 //                context?.fetch(NSFetchRequest<quantidade>) as! PlantinhasCrescidas
+                var numeroPlantinhas = UserDefaults.standard.integer(forKey: "numero_plantinhas")
+                UserDefaults.standard.set(numeroPlantinhas + 1, forKey: "numero_plantinhas")
+                print(UserDefaults.standard.integer(forKey: "numero_plantinhas"))
             default:
                 plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha1")
                 plantinhaEstado = Int32(1)
@@ -82,6 +85,7 @@ class ViewControllerIncio: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        createNotification()
         context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         loadData()
         lblDinheiroNaoGasto.text = String(valorDiario?.valorTotal ?? 0)

@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import NotificationCenter
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

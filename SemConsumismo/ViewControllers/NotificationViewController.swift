@@ -29,9 +29,12 @@ func createNotification(){
     content.sound = UNNotificationSound.default
     
     // when notification will apear
-    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 70, repeats: true)
-    
+    var dateComponents = DateComponents()
+    dateComponents.hour = 19
+    dateComponents.minute = 30
+    let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
     // request
+    
     let request = UNNotificationRequest(identifier: "notificationCenter", content: content, trigger: trigger)
     
     notificationCenter.add(request) { (error) in

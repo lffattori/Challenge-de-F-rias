@@ -16,6 +16,7 @@ class ConfiguracoesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        self.hideKeyboardWhenTappedAround() 
     }
     
     @IBAction func salvarInfo(_ sender: Any) {
@@ -25,7 +26,7 @@ class ConfiguracoesViewController: UIViewController {
         if let text = campoValor.text, text != "" {
             let registro = NSEntityDescription.insertNewObject(forEntityName: "ValorDiario", into: context) as! ValorDiario
             print(registro)
-            if let v = Double(text){
+            if let v = Float(text){
                 registro.valorDinheiro = v
             }
             
@@ -56,18 +57,6 @@ class ConfiguracoesViewController: UIViewController {
     @IBAction func botaoCancelar(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+ 
 }
 

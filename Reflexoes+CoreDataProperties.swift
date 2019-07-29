@@ -2,7 +2,7 @@
 //  Reflexoes+CoreDataProperties.swift
 //  SemConsumismo
 //
-//  Created by Luiza Fattori on 22/07/19.
+//  Created by Luiza Fattori on 26/07/19.
 //  Copyright © 2019 Luiza Fattori. All rights reserved.
 //
 //
@@ -18,6 +18,6 @@ extension Reflexoes {
     }
 
     @NSManaged public var reflexao: String?
-    @NSManaged public var valor: Double
+    @NSManaged public var valor: Float
 
 }

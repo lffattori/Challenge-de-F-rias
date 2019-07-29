@@ -12,8 +12,8 @@ import CoreData
 class ViewControllerIncio: UIViewController {
     
     var context:NSManagedObjectContext?
-    var dinheiroTotal:Double? = 0.0
-    var gastoDiario:Double? = 0.0
+    var dinheiroTotal:Float? = 0.0
+    var gastoDiario:Float? = 0.0
     
     var plantinhaEstado: Int32? {
         didSet {
@@ -62,7 +62,7 @@ class ViewControllerIncio: UIViewController {
         plantinhaEstado = Int32(aux + 1)
         valorDiario?.valorTotal += gastoDiario ?? 0
         self.dinheiroTotal = valorDiario?.valorTotal ?? 0
-        lblDinheiroNaoGasto.text = String(valorDiario?.valorTotal ?? 0)
+        lblDinheiroNaoGasto.text = String(format: "%.2f", valorDiario?.valorTotal ?? 0)
         lblDinheiroNaoGasto.reloadInputViews()
         self.saveData()
         }
@@ -82,13 +82,13 @@ class ViewControllerIncio: UIViewController {
 //            acesso = true
 //        }
 //    }
-   
+
     override func viewDidLoad() {
         super.viewDidLoad()
         createNotification()
         context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         loadData()
-        lblDinheiroNaoGasto.text = String(valorDiario?.valorTotal ?? 0)
+        lblDinheiroNaoGasto.text = String(format: "%.2f", valorDiario?.valorTotal ?? 0)
         lblDinheiroNaoGasto.reloadInputViews()
         if(plantinhaEstado == nil){
             plantinhaEstado = Int32(1)
@@ -119,8 +119,8 @@ class ViewControllerIncio: UIViewController {
                 let result = try context.fetch(request)
                 let data = result.last as? NSManagedObject
                 valorDiario = data as? ValorDiario
-                gastoDiario = valorDiario?.value(forKey: "valorDinheiro") as? Double
-                dinheiroTotal = valorDiario?.value(forKey: "valorTotal") as? Double
+                gastoDiario = valorDiario?.value(forKey: "valorDinheiro") as? Float
+                dinheiroTotal = valorDiario?.value(forKey: "valorTotal") as? Float
 //                valorDiario = result.last as? ValorDiario
 //                for data in result as! [NSManagedObject] {
 ////                    gastoDiario = data.value(forKey: "valorDinheiro") as! Double

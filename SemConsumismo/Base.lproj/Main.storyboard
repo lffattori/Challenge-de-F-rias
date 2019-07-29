@@ -35,39 +35,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quadroQuebra" translatesAutoresizingMaskIntoConstraints="NO" id="3EY-TF-wpv">
-                                <rect key="frame" x="4" y="72" width="408" height="673"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dja-ae-HqC">
-                                <rect key="frame" x="66" y="736" width="285" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="botaoComecar"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPk-dc-U0k">
+                                <rect key="frame" x="20.5" y="88" width="373" height="672"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quadroQuebra" translatesAutoresizingMaskIntoConstraints="NO" id="3EY-TF-wpv">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="672"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wvk-ge-6gu">
+                                        <rect key="frame" x="47" y="33.5" width="279" height="605"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você está passando por uma tentação" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nb-nr-plb">
+                                                <rect key="frame" x="6" y="0.0" width="267.5" height="302.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="26"/>
+                                                <color key="textColor" red="0.43921875953674316" green="0.43921005725860596" blue="0.43921592831611633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vamos racionalizar a sua compra para você não gastar dinheiro a toa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NA-Cd-yCA">
+                                                <rect key="frame" x="9.5" y="302.5" width="260.5" height="302.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
+                                                <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3EY-TF-wpv" secondAttribute="trailing" id="1lz-Jo-EEM"/>
+                                    <constraint firstItem="Wvk-ge-6gu" firstAttribute="centerY" secondItem="VPk-dc-U0k" secondAttribute="centerY" id="IRu-JG-RfY"/>
+                                    <constraint firstItem="Wvk-ge-6gu" firstAttribute="height" secondItem="VPk-dc-U0k" secondAttribute="height" multiplier="0.9" id="Lo2-Hw-vO3"/>
+                                    <constraint firstItem="Wvk-ge-6gu" firstAttribute="centerX" secondItem="VPk-dc-U0k" secondAttribute="centerX" id="XBC-iQ-nM6"/>
+                                    <constraint firstItem="3EY-TF-wpv" firstAttribute="top" secondItem="VPk-dc-U0k" secondAttribute="top" id="gbb-mE-fDu"/>
+                                    <constraint firstAttribute="bottom" secondItem="3EY-TF-wpv" secondAttribute="bottom" id="jdm-i1-ed0"/>
+                                    <constraint firstItem="3EY-TF-wpv" firstAttribute="leading" secondItem="VPk-dc-U0k" secondAttribute="leading" id="pId-MX-JtK"/>
+                                    <constraint firstItem="Wvk-ge-6gu" firstAttribute="width" secondItem="VPk-dc-U0k" secondAttribute="width" multiplier="0.75" id="wgZ-wV-ALG"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dja-ae-HqC">
+                                <rect key="frame" x="65.5" y="760" width="283" height="79"/>
+                                <state key="normal" image="botaoComecar"/>
                                 <connections>
                                     <segue destination="cyM-dQ-5xu" kind="show" id="DIk-RR-dP7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você está passando por uma tentação" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nb-nr-plb">
-                                <rect key="frame" x="56" y="153" width="303" height="154"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="36"/>
-                                <color key="textColor" red="0.43921875953674316" green="0.43921005725860596" blue="0.43921592831611633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vamos racionalizar a sua compra para você não gastar dinheiro a toa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NA-Cd-yCA">
-                                <rect key="frame" x="64" y="343" width="295" height="210"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="26"/>
-                                <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dja-ae-HqC" firstAttribute="centerX" secondItem="1xJ-U1-m9h" secondAttribute="centerX" id="5ql-Vm-QpM"/>
+                            <constraint firstItem="VPk-dc-U0k" firstAttribute="top" secondItem="1xJ-U1-m9h" secondAttribute="top" id="Enx-53-654"/>
+                            <constraint firstItem="VPk-dc-U0k" firstAttribute="centerX" secondItem="1xJ-U1-m9h" secondAttribute="centerX" id="MaX-bg-S8i"/>
+                            <constraint firstItem="Dja-ae-HqC" firstAttribute="top" secondItem="VPk-dc-U0k" secondAttribute="bottom" id="Oaq-PU-kqC"/>
+                            <constraint firstItem="VPk-dc-U0k" firstAttribute="width" secondItem="oGR-S1-X0f" secondAttribute="width" multiplier="0.9" id="Qro-Wo-QVd"/>
+                            <constraint firstItem="VPk-dc-U0k" firstAttribute="height" secondItem="oGR-S1-X0f" secondAttribute="height" multiplier="0.75" id="rn2-5k-RJj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1xJ-U1-m9h"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Quebra de Impulso" id="7Ei-eS-rdh">
-                        <barButtonItem key="backBarButtonItem" title="Voltar" id="xmM-eR-J9V"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Quebra de Impulso" id="7Ei-eS-rdh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqQ-kR-8dl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,7 +105,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNn-5R-NXD">
-                                <rect key="frame" x="20" y="156" width="374" height="136"/>
+                                <rect key="frame" x="20" y="156" width="374" height="140.5"/>
                                 <color key="backgroundColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="9px-dt-Bpd" kind="embed" id="3vh-36-hzV"/>
@@ -96,14 +119,14 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seu jardim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndD-Fs-3zw">
-                                <rect key="frame" x="20" y="98" width="200" height="44"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="36"/>
+                                <rect key="frame" x="20" y="98" width="178" height="39.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="32"/>
                                 <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suas reflexões" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVy-Qm-b4s">
-                                <rect key="frame" x="20" y="302" width="265" height="44"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="36"/>
+                                <rect key="frame" x="20" y="306.5" width="235" height="39.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="32"/>
                                 <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -136,7 +159,7 @@
             <objects>
                 <collectionViewController id="9px-dt-Bpd" customClass="PlantinhaCollectionViewController" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6Pz-sV-yKa">
-                        <rect key="frame" x="0.0" y="0.0" width="374" height="136"/>
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="140.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HKJ-8L-Laa">
@@ -147,7 +170,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="celulaPlantinha" id="OYA-vA-eWS">
-                                <rect key="frame" x="0.0" y="13" width="87" height="110"/>
+                                <rect key="frame" x="0.0" y="15.5" width="87" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="87" height="110"/>
@@ -189,10 +212,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmN-wq-MbR" customClass="CardView" customModule="SemConsumismo" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="20" width="280" height="110"/>
+                                            <rect key="frame" x="20" y="20" width="374" height="110"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tc8-73-2BE">
-                                                    <rect key="frame" x="10" y="46" width="260" height="26"/>
+                                                    <rect key="frame" x="10" y="46" width="354" height="26"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" id="1Ak-Br-7oB"/>
                                                     </constraints>
@@ -201,7 +224,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYh-cr-BFV">
-                                                    <rect key="frame" x="10" y="10" width="260" height="26"/>
+                                                    <rect key="frame" x="10" y="10" width="354" height="26"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -362,61 +385,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quadroQuebra" translatesAutoresizingMaskIntoConstraints="NO" id="Mw7-vq-SsR">
-                                <rect key="frame" x="4" y="72" width="408" height="673"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você quer o que está querendo comprar?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmJ-VC-tAx">
-                                <rect key="frame" x="73" y="148" width="271" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="36"/>
-                                <color key="textColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiF-cS-mwN">
-                                <rect key="frame" x="227" y="729" width="122" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="simQuebra"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6P-eO-gIv">
-                                <rect key="frame" x="60" y="729" width="121" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="naoQuebra"/>
-                                <connections>
-                                    <segue destination="yVn-Uj-eHM" kind="show" id="SXA-iG-rRK"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="O que você viu te chamou atenção. mas faça a seguinte reflexão:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWZ-jc-EXW">
-                                <rect key="frame" x="65" y="397" width="306" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="26"/>
-                                <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="é algo que realmente quero?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moj-xg-doh">
-                                <rect key="frame" x="65" y="537" width="306" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="26"/>
-                                <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="highlightedColor" red="0.43921875953674316" green="0.43921005725860596" blue="0.43921592831611633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4I-Fa-wZH">
-                                <rect key="frame" x="227" y="729" width="122" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="simQuebra"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4I-Fa-wZH">
+                                <rect key="frame" x="233" y="729" width="121" height="79"/>
+                                <state key="normal" image="simQuebra"/>
                                 <connections>
                                     <segue destination="Kik-Ga-MDt" kind="show" id="Edu-60-T7H"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quadroQuebra" translatesAutoresizingMaskIntoConstraints="NO" id="Mw7-vq-SsR">
+                                <rect key="frame" x="18" y="105" width="378" height="624"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="624" id="RHi-BW-Hcf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="é algo que realmente quero?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moj-xg-doh">
+                                <rect key="frame" x="62" y="480" width="251" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="21"/>
+                                <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" red="0.43921875953674316" green="0.43921005725860596" blue="0.43921592831611633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="O que você viu te chamou atenção. mas faça a seguinte reflexão:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWZ-jc-EXW">
+                                <rect key="frame" x="60" y="372" width="282" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
+                                <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6P-eO-gIv">
+                                <rect key="frame" x="60" y="729" width="121" height="79"/>
+                                <state key="normal" image="naoQuebra"/>
+                                <connections>
+                                    <segue destination="yVn-Uj-eHM" kind="show" id="SXA-iG-rRK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Você quer o que está desejando comprar?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmJ-VC-tAx">
+                                <rect key="frame" x="60" y="195" width="294" height="97"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="26"/>
+                                <color key="textColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mw7-vq-SsR" firstAttribute="top" secondItem="Low-59-lGi" secondAttribute="top" constant="17" id="EG7-yI-wXs"/>
+                            <constraint firstItem="Z6P-eO-gIv" firstAttribute="leading" secondItem="Low-59-lGi" secondAttribute="leading" constant="60" id="FoG-Re-0iL"/>
+                            <constraint firstItem="NmJ-VC-tAx" firstAttribute="leading" secondItem="Low-59-lGi" secondAttribute="leading" constant="60" id="HBc-aV-1pU"/>
+                            <constraint firstItem="Mw7-vq-SsR" firstAttribute="leading" secondItem="Low-59-lGi" secondAttribute="leading" constant="18" id="LEt-bK-7TA"/>
+                            <constraint firstItem="i4I-Fa-wZH" firstAttribute="top" secondItem="Mw7-vq-SsR" secondAttribute="bottom" id="Og4-tg-T5q"/>
+                            <constraint firstItem="Mw7-vq-SsR" firstAttribute="centerX" secondItem="y74-Aj-KEg" secondAttribute="centerX" id="QPi-oj-AaT"/>
+                            <constraint firstItem="Low-59-lGi" firstAttribute="trailing" secondItem="NmJ-VC-tAx" secondAttribute="trailing" constant="60" id="QfR-Pj-e6F"/>
+                            <constraint firstItem="Z6P-eO-gIv" firstAttribute="top" secondItem="Mw7-vq-SsR" secondAttribute="bottom" id="b2V-e5-aiQ"/>
+                            <constraint firstItem="NmJ-VC-tAx" firstAttribute="top" secondItem="Low-59-lGi" secondAttribute="top" constant="107" id="vXf-F2-TF0"/>
+                            <constraint firstItem="Low-59-lGi" firstAttribute="trailing" secondItem="i4I-Fa-wZH" secondAttribute="trailing" constant="60" id="vm0-Pl-n8f"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Low-59-lGi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Quebra de Impulso" id="0LM-ft-y83"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zap-XJ-7q0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2386" y="21"/>
+            <point key="canvasLocation" x="2385.507246376812" y="20.758928571428569"/>
         </scene>
         <!--Quebra de Impulso-->
         <scene sceneID="C3L-Ag-LYM">
@@ -426,51 +455,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quadroQuebra" translatesAutoresizingMaskIntoConstraints="NO" id="t83-aa-GLr">
-                                <rect key="frame" x="4" y="72" width="408" height="673"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quadroQuebra" translatesAutoresizingMaskIntoConstraints="NO" id="6CJ-1z-AGc">
+                                <rect key="frame" x="0.0" y="125" width="414" height="571"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quebra de Impulso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jN-38-HtG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Quebra de Impulso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jN-38-HtG">
                                 <rect key="frame" x="134" y="53" width="146" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você tem dinheiro para comprar o que quer?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K00-PY-P1z">
-                                <rect key="frame" x="73" y="148" width="271" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="36"/>
-                                <color key="textColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01U-N7-rEq">
-                                <rect key="frame" x="227" y="729" width="122" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="simQuebra"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01U-N7-rEq">
+                                <rect key="frame" x="233" y="729" width="121" height="79"/>
+                                <state key="normal" image="simQuebra"/>
                                 <connections>
                                     <segue destination="Aw4-GL-g94" kind="show" id="YBh-Q0-Uvw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCz-Ds-QpV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCz-Ds-QpV">
                                 <rect key="frame" x="60" y="729" width="121" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="naoQuebra"/>
+                                <state key="normal" image="naoQuebra"/>
                                 <connections>
                                     <segue destination="yVn-Uj-eHM" kind="show" id="yed-hX-dre"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Não é saudável gastar" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0i-QJ-FIA">
-                                <rect key="frame" x="55" y="356" width="306" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Não é saudável gastar" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0i-QJ-FIA">
+                                <rect key="frame" x="72" y="387" width="228" height="26"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dinheiro que você não tem" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgI-zd-kLZ">
-                                <rect key="frame" x="55" y="395" width="284" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dinheiro que você não tem" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgI-zd-kLZ">
+                                <rect key="frame" x="70" y="421" width="269" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Afg-u9-Ifl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
@@ -479,22 +498,52 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="setinhaParaEsquerda"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lembre-se: o cartão de crédito não é seu amigo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwb-WA-L9e">
-                                <rect key="frame" x="55" y="463" width="284" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lembre-se: o cartão de crédito não é seu amigo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwb-WA-L9e">
+                                <rect key="frame" x="70" y="511" width="269" height="51.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" red="0.43921875953674316" green="0.43921005725860596" blue="0.43921592831611633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Você tem dinheiro para comprar o que quer?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K00-PY-P1z">
+                                <rect key="frame" x="72" y="191" width="271" height="112"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="VG7-Mk-HSa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="26"/>
+                                <color key="textColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="K00-PY-P1z" firstAttribute="centerX" secondItem="6jN-38-HtG" secondAttribute="centerX" id="3Lh-fm-oRF"/>
+                            <constraint firstItem="rgI-zd-kLZ" firstAttribute="top" secondItem="eN7-f7-GNa" secondAttribute="top" constant="421" id="7is-6p-6ZN"/>
+                            <constraint firstItem="6CJ-1z-AGc" firstAttribute="top" secondItem="8vj-K2-JCH" secondAttribute="top" constant="37" id="8md-GD-WfT"/>
+                            <constraint firstItem="K00-PY-P1z" firstAttribute="centerX" secondItem="6CJ-1z-AGc" secondAttribute="centerX" id="9Os-b0-9eh"/>
+                            <constraint firstItem="6CJ-1z-AGc" firstAttribute="leading" secondItem="8vj-K2-JCH" secondAttribute="leading" id="CEs-tB-FVN"/>
+                            <constraint firstItem="rgI-zd-kLZ" firstAttribute="leading" secondItem="8vj-K2-JCH" secondAttribute="leading" constant="70" id="Efx-2P-mTd"/>
+                            <constraint firstItem="mCz-Ds-QpV" firstAttribute="leading" secondItem="8vj-K2-JCH" secondAttribute="leading" constant="60" id="GMj-a3-wh6"/>
+                            <constraint firstItem="8vj-K2-JCH" firstAttribute="trailing" secondItem="01U-N7-rEq" secondAttribute="trailing" constant="60" id="NZy-BA-Auc"/>
+                            <constraint firstItem="K00-PY-P1z" firstAttribute="top" secondItem="8vj-K2-JCH" secondAttribute="top" constant="103" id="hUC-2O-SJa"/>
+                            <constraint firstItem="K00-PY-P1z" firstAttribute="leading" secondItem="8vj-K2-JCH" secondAttribute="leading" constant="72" id="jOQ-L3-hfn"/>
+                            <constraint firstItem="bwb-WA-L9e" firstAttribute="top" secondItem="rgI-zd-kLZ" secondAttribute="bottom" constant="10" id="jjK-RW-OoO"/>
+                            <constraint firstItem="8vj-K2-JCH" firstAttribute="trailing" secondItem="6CJ-1z-AGc" secondAttribute="trailing" id="kPA-SM-pAq"/>
+                            <constraint firstItem="T0i-QJ-FIA" firstAttribute="top" secondItem="K00-PY-P1z" secondAttribute="bottom" constant="84" id="qb2-Ma-V7p"/>
+                            <constraint firstItem="K00-PY-P1z" firstAttribute="leading" secondItem="T0i-QJ-FIA" secondAttribute="leading" id="udS-uJ-ntV"/>
+                            <constraint firstItem="rgI-zd-kLZ" firstAttribute="leading" secondItem="bwb-WA-L9e" secondAttribute="leading" id="v1S-3L-u7e"/>
+                            <constraint firstItem="8vj-K2-JCH" firstAttribute="trailing" secondItem="rgI-zd-kLZ" secondAttribute="trailing" constant="75" id="w5f-Sd-ENP"/>
+                            <constraint firstItem="8vj-K2-JCH" firstAttribute="trailing" secondItem="bwb-WA-L9e" secondAttribute="trailing" constant="75" id="yYi-GI-LEy"/>
+                            <constraint firstItem="8vj-K2-JCH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="T0i-QJ-FIA" secondAttribute="trailing" symbolic="YES" id="yxx-JL-936"/>
+                            <constraint firstItem="8vj-K2-JCH" firstAttribute="bottom" secondItem="01U-N7-rEq" secondAttribute="bottom" constant="54" id="yz5-ep-Fpy"/>
+                            <constraint firstItem="8vj-K2-JCH" firstAttribute="bottom" secondItem="mCz-Ds-QpV" secondAttribute="bottom" constant="54" id="zvo-ZJ-wDP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8vj-K2-JCH"/>
                     </view>
                     <navigationItem key="navigationItem" title="Quebra de Impulso" id="wTM-O8-bEd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEq-9A-9U2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3090" y="21"/>
+            <point key="canvasLocation" x="3066.666666666667" y="20.758928571428569"/>
         </scene>
         <!--Quebra de Impulso-->
         <scene sceneID="l9s-8K-epj">
@@ -504,44 +553,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quadroQuebra" translatesAutoresizingMaskIntoConstraints="NO" id="a1M-fQ-7Yg">
-                                <rect key="frame" x="4" y="72" width="408" height="673"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quebra de Impulso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hv5-q6-PIq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Quebra de Impulso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hv5-q6-PIq">
                                 <rect key="frame" x="134" y="53" width="146" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você precisa dessa produto?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="592-jS-32E">
-                                <rect key="frame" x="73" y="114" width="271" height="200"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você precisa dessa produto?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="592-jS-32E">
+                                <rect key="frame" x="72" y="168" width="271" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="26"/>
                                 <color key="textColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EF7-do-J5y">
-                                <rect key="frame" x="227" y="729" width="122" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="simQuebra"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EF7-do-J5y">
+                                <rect key="frame" x="233" y="729" width="121" height="79"/>
+                                <state key="normal" image="simQuebra"/>
                                 <connections>
                                     <segue destination="wSa-oX-9zZ" kind="show" id="do1-1K-cMu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4f8-o9-9oS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4f8-o9-9oS">
                                 <rect key="frame" x="60" y="729" width="121" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="naoQuebra"/>
+                                <state key="normal" image="naoQuebra"/>
                                 <connections>
                                     <segue destination="yVn-Uj-eHM" kind="show" id="HeX-yy-EM4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Desejo e necessidade são coisas bem diferentes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2L-i8-2w1">
-                                <rect key="frame" x="60" y="313" width="284" height="150"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Desejo e necessidade são coisas bem diferentes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2L-i8-2w1">
+                                <rect key="frame" x="72" y="361" width="255" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -550,22 +592,36 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="setinhaParaEsquerda"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Por exemplo: você precisa de água, você só quer alguma coisa nova que acabou de sair" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mt-gM-JET">
-                                <rect key="frame" x="55" y="454" width="306" height="176"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Por exemplo: você precisa de água, você só quer alguma coisa nova que acabou de sair" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mt-gM-JET">
+                                <rect key="frame" x="72" y="454" width="271" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quadroQuebra" translatesAutoresizingMaskIntoConstraints="NO" id="a1M-fQ-7Yg">
+                                <rect key="frame" x="0.0" y="125" width="414" height="571"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9hK-2C-ffd" firstAttribute="top" secondItem="hv5-q6-PIq" secondAttribute="bottom" constant="14" id="2CL-aR-BJO"/>
+                            <constraint firstItem="a1M-fQ-7Yg" firstAttribute="centerX" secondItem="9hK-2C-ffd" secondAttribute="centerX" id="2NQ-de-eZ2"/>
+                            <constraint firstItem="9hK-2C-ffd" firstAttribute="trailing" secondItem="EF7-do-J5y" secondAttribute="trailing" constant="60" id="7az-Dr-cXv"/>
+                            <constraint firstItem="a1M-fQ-7Yg" firstAttribute="top" secondItem="9hK-2C-ffd" secondAttribute="top" constant="37" id="JTJ-ub-X2m"/>
+                            <constraint firstItem="a1M-fQ-7Yg" firstAttribute="leading" secondItem="9hK-2C-ffd" secondAttribute="leading" id="Z1O-6b-OiG"/>
+                            <constraint firstItem="9hK-2C-ffd" firstAttribute="bottom" secondItem="4f8-o9-9oS" secondAttribute="bottom" constant="54" id="Z9y-eh-0KG"/>
+                            <constraint firstItem="9hK-2C-ffd" firstAttribute="trailing" secondItem="a1M-fQ-7Yg" secondAttribute="trailing" id="dB4-sS-7UA"/>
+                            <constraint firstItem="9hK-2C-ffd" firstAttribute="bottom" secondItem="EF7-do-J5y" secondAttribute="bottom" constant="54" id="qu9-8d-i9u"/>
+                            <constraint firstItem="4f8-o9-9oS" firstAttribute="leading" secondItem="9hK-2C-ffd" secondAttribute="leading" constant="60" id="uIz-xG-Cnl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9hK-2C-ffd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Quebra de Impulso" id="UXQ-FC-Zkr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6e8-bi-VVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3728" y="21"/>
+            <point key="canvasLocation" x="3727.5362318840585" y="20.758928571428569"/>
         </scene>
         <!--Quebra de Impulso-->
         <scene sceneID="YqJ-62-8ed">
@@ -575,10 +631,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quadroQuebra" translatesAutoresizingMaskIntoConstraints="NO" id="9dk-SA-tM1">
-                                <rect key="frame" x="4" y="72" width="408" height="673"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quebra de Impulso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlM-d5-k58">
                                 <rect key="frame" x="134" y="53" width="146" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -586,30 +638,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você deveria fazer essa compra?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b10-wJ-srd">
-                                <rect key="frame" x="73" y="106" width="271" height="200"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você deveria fazer essa compra?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b10-wJ-srd">
+                                <rect key="frame" x="74" y="174" width="271" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="26"/>
                                 <color key="textColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8t-yV-MGb">
-                                <rect key="frame" x="227" y="729" width="122" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="simQuebra"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmf-v7-Qvu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmf-v7-Qvu">
                                 <rect key="frame" x="60" y="729" width="121" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="naoQuebra"/>
+                                <state key="normal" image="naoQuebra"/>
                                 <connections>
                                     <segue destination="yVn-Uj-eHM" kind="show" id="Ai0-h3-LUi"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="É como diz o ditado: de grão em grão a galinha enche o papo. Pode ser só 10 reais agora, mas depois você pode precisar" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMS-BK-4bg">
-                                <rect key="frame" x="60" y="272" width="306" height="241"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="É como diz o ditado: de grão em grão a galinha enche o papo. Pode ser só 10 reais agora, mas depois você pode precisar" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMS-BK-4bg">
+                                <rect key="frame" x="79" y="323" width="260" height="163"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -618,30 +664,41 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="setinhaParaEsquerda"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pense bem se você deve gastar dinheiro com isso." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgo-rH-eUf">
-                                <rect key="frame" x="54" y="481" width="306" height="115"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pense bem se você deve gastar dinheiro com isso." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgo-rH-eUf">
+                                <rect key="frame" x="79" y="494" width="265" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6s-yF-V7N">
-                                <rect key="frame" x="227" y="729" width="122" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="simQuebra"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6s-yF-V7N">
+                                <rect key="frame" x="233" y="729" width="121" height="79"/>
+                                <state key="normal" image="simQuebra"/>
                                 <connections>
                                     <segue destination="E6j-AG-Owu" kind="show" id="Wka-fx-2fg"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quadroQuebra" translatesAutoresizingMaskIntoConstraints="NO" id="9dk-SA-tM1">
+                                <rect key="frame" x="0.0" y="125" width="414" height="571"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9dk-SA-tM1" firstAttribute="leading" secondItem="p7H-z8-Y8a" secondAttribute="leading" id="0ZZ-Si-8s3"/>
+                            <constraint firstItem="kmf-v7-Qvu" firstAttribute="leading" secondItem="p7H-z8-Y8a" secondAttribute="leading" constant="60" id="7uR-B3-2bK"/>
+                            <constraint firstItem="p7H-z8-Y8a" firstAttribute="bottom" secondItem="kmf-v7-Qvu" secondAttribute="bottom" constant="54" id="GYN-Ui-yOB"/>
+                            <constraint firstItem="p7H-z8-Y8a" firstAttribute="bottom" secondItem="y6s-yF-V7N" secondAttribute="bottom" constant="54" id="jnE-Ft-6HR"/>
+                            <constraint firstItem="p7H-z8-Y8a" firstAttribute="trailing" secondItem="9dk-SA-tM1" secondAttribute="trailing" id="vjv-sh-jMW"/>
+                            <constraint firstItem="9dk-SA-tM1" firstAttribute="top" secondItem="p7H-z8-Y8a" secondAttribute="top" constant="37" id="x1y-rd-5RM"/>
+                            <constraint firstItem="p7H-z8-Y8a" firstAttribute="trailing" secondItem="y6s-yF-V7N" secondAttribute="trailing" constant="60" id="ztM-xX-zuv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="p7H-z8-Y8a"/>
                     </view>
                     <navigationItem key="navigationItem" title="Quebra de Impulso" id="4PP-PT-kSJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNd-pp-gX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4394" y="21"/>
+            <point key="canvasLocation" x="4392.753623188406" y="20.758928571428569"/>
         </scene>
         <!--View Controller Info-->
         <scene sceneID="Z1u-uJ-gym">
@@ -651,64 +708,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSx-xj-DsF">
-                                <rect key="frame" x="20" y="54" width="75" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
-                                <state key="normal" title="Cancelar">
-                                    <color key="titleColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFa-MK-ufr">
-                                <rect key="frame" x="20" y="54" width="75" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
-                                <state key="normal" title="Cancelar">
-                                    <color key="titleColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="botaoCancelar:" destination="Vq8-3k-s7F" eventType="touchUpInside" id="2bl-fk-VCz"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reflita sobre sua compra. Como você estava se sentindo? Essa compra foi necessária?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGd-B1-yhF">
-                                <rect key="frame" x="45" y="268" width="303" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reflita sobre sua compra. Como você estava se sentindo? Essa compra foi necessária?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGd-B1-yhF">
+                                <rect key="frame" x="36" y="271" width="355" height="77"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Insira o valor aqui ex: 4.56" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cek-hi-8Tx">
-                                <rect key="frame" x="93" y="204" width="277" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="ex: 4.56" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cek-hi-8Tx">
+                                <rect key="frame" x="72" y="210" width="268" height="26"/>
                                 <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Qual foi o valor?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIo-m0-s5o">
-                                <rect key="frame" x="93" y="142" width="212" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="26"/>
-                                <color key="textColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGn-oP-7dI">
-                                <rect key="frame" x="54" y="208" width="29" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGn-oP-7dI">
+                                <rect key="frame" x="35.5" y="211" width="28.5" height="26"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="U5k-Fd-Zm5">
-                                <rect key="frame" x="54" y="452" width="294" height="303"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8c-07-3U1">
-                                <rect key="frame" x="343" y="60" width="51" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8c-07-3U1">
+                                <rect key="frame" x="339" y="54" width="51" height="33"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <state key="normal" title="Salvar">
                                     <color key="titleColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -717,12 +736,56 @@
                                     <action selector="salvar:" destination="Vq8-3k-s7F" eventType="touchUpInside" id="g5R-5y-pYd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFa-MK-ufr">
+                                <rect key="frame" x="24" y="54" width="75" height="33"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="botaoCancelar:" destination="Vq8-3k-s7F" eventType="touchUpInside" id="2bl-fk-VCz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual foi o valor?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIo-m0-s5o">
+                                <rect key="frame" x="121.5" y="136" width="171" height="26"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="21"/>
+                                <color key="textColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="U5k-Fd-Zm5">
+                                <rect key="frame" x="65" y="388" width="294" height="162"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="H58-mS-bn3"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hIo-m0-s5o" firstAttribute="top" secondItem="4SV-ih-NLh" secondAttribute="top" constant="92" id="6gI-ep-9I0"/>
+                            <constraint firstItem="HFa-MK-ufr" firstAttribute="leading" secondItem="4SV-ih-NLh" secondAttribute="leading" constant="24" id="8jL-Pz-GH5"/>
+                            <constraint firstItem="4SV-ih-NLh" firstAttribute="trailing" secondItem="U5k-Fd-Zm5" secondAttribute="trailing" constant="55" id="Fdv-EX-N06"/>
+                            <constraint firstItem="iGd-B1-yhF" firstAttribute="leading" secondItem="4SV-ih-NLh" secondAttribute="leading" constant="36" id="Tsa-0s-r8q"/>
+                            <constraint firstItem="cek-hi-8Tx" firstAttribute="top" secondItem="hIo-m0-s5o" secondAttribute="bottom" constant="48" id="Tzr-Gz-W8O"/>
+                            <constraint firstItem="4SV-ih-NLh" firstAttribute="trailing" secondItem="iGd-B1-yhF" secondAttribute="trailing" constant="23" id="XRa-L6-MIB"/>
+                            <constraint firstItem="hIo-m0-s5o" firstAttribute="centerX" secondItem="4SV-ih-NLh" secondAttribute="centerX" id="Xyc-gJ-pxy"/>
+                            <constraint firstItem="cek-hi-8Tx" firstAttribute="leading" secondItem="nGn-oP-7dI" secondAttribute="trailing" constant="8" id="ake-SJ-SHq"/>
+                            <constraint firstItem="4SV-ih-NLh" firstAttribute="trailing" secondItem="g8c-07-3U1" secondAttribute="trailing" constant="24" id="dIP-Ym-g6Y"/>
+                            <constraint firstItem="nGn-oP-7dI" firstAttribute="top" secondItem="HFa-MK-ufr" secondAttribute="bottom" constant="124" id="fc7-tj-YR2"/>
+                            <constraint firstItem="g8c-07-3U1" firstAttribute="top" secondItem="4SV-ih-NLh" secondAttribute="top" constant="10" id="hwr-3p-MB7"/>
+                            <constraint firstItem="nGn-oP-7dI" firstAttribute="leading" secondItem="4SV-ih-NLh" secondAttribute="leading" constant="35.5" id="lkX-uX-EOJ"/>
+                            <constraint firstItem="HFa-MK-ufr" firstAttribute="top" secondItem="4SV-ih-NLh" secondAttribute="top" constant="10" id="na5-xm-ucv"/>
+                            <constraint firstItem="U5k-Fd-Zm5" firstAttribute="top" secondItem="iGd-B1-yhF" secondAttribute="bottom" constant="40" id="v81-ju-4wh"/>
+                            <constraint firstItem="U5k-Fd-Zm5" firstAttribute="leading" secondItem="4SV-ih-NLh" secondAttribute="leading" constant="65" id="xLz-KM-Mau"/>
+                            <constraint firstItem="iGd-B1-yhF" firstAttribute="top" secondItem="nGn-oP-7dI" secondAttribute="bottom" constant="34" id="yjY-SU-29i"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4SV-ih-NLh"/>
                     </view>
                     <connections>
-                        <outlet property="campoReflexao" destination="U5k-Fd-Zm5" id="fQG-nL-De1"/>
+                        <outlet property="campoReflexao" destination="U5k-Fd-Zm5" id="sM1-pC-OAR"/>
                         <outlet property="campoValor" destination="cek-hi-8Tx" id="phN-il-jIH"/>
                     </connections>
                 </viewController>
@@ -749,8 +812,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suas informações" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6H5-1R-MaT">
-                                <rect key="frame" x="61" y="110" width="292" height="40"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="32"/>
+                                <rect key="frame" x="88.5" y="110" width="237.5" height="32"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="26"/>
                                 <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -766,8 +829,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quanto você gasta em compras por dia?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vi5-fd-fQZ">
-                                <rect key="frame" x="24" y="174" width="366" height="63.5"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="26"/>
+                                <rect key="frame" x="24" y="166" width="366" height="51.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -779,13 +842,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V40-Fw-2ZU">
-                                <rect key="frame" x="51" y="295" width="28.5" height="26"/>
+                                <rect key="frame" x="51" y="275" width="28.5" height="26"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="ex: 37.75" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9DB-Gg-iJa">
-                                <rect key="frame" x="87.5" y="295" width="88.5" height="26"/>
+                                <rect key="frame" x="87.5" y="275" width="88.5" height="26"/>
                                 <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -907,7 +970,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b43-jx-Vog" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207" y="21"/>
+            <point key="canvasLocation" x="-81" y="20"/>
         </scene>
         <!--View Controller Respostas-->
         <scene sceneID="Hsa-h6-RKD">
@@ -924,15 +987,15 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Então é melhor não comprar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSJ-X4-I0W">
                                 <rect key="frame" x="56" y="176" width="303" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="26"/>
                                 <color key="textColor" red="0.80246543879999999" green="0.41904845829999998" blue="0.47450822590000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTF-Zu-Qa5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTF-Zu-Qa5">
                                 <rect key="frame" x="56" y="311" width="306" height="355"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Por mais tentador que seja, não gaste esse dinheiro agora. Você pode guardar esse dinheiro e investir em uma aplicação simples, ou fazer uma doação. Não gaste esse dinheiro desnecessamente.</string>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -968,15 +1031,15 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pode comprar!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOg-S2-iJ7">
                                 <rect key="frame" x="56" y="161" width="303" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="26"/>
                                 <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTo-Pp-i7y">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTo-Pp-i7y">
                                 <rect key="frame" x="56" y="297" width="306" height="355"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Depois de ter passado por todo esse processo de quebra de impulso e racionalização da compra, você está conscinete da sua escolha e vai tomar uma decisão bem mais saudável.</string>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>

@@ -5,11 +5,11 @@
     </entity>
     <entity name="Reflexoes" representedClassName=".Reflexoes" syncable="YES">
         <attribute name="reflexao" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="valor" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="valor" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="ValorDiario" representedClassName=".ValorDiario" syncable="YES">
-        <attribute name="valorDinheiro" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="valorTotal" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="valorDinheiro" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="valorTotal" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
         <element name="Plantinha" positionX="-63" positionY="9" width="128" height="60"/>

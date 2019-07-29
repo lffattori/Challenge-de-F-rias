@@ -18,7 +18,7 @@ class ViewControllerInfo: UIViewController, UITextViewDelegate {
         }
         let registro = NSEntityDescription.insertNewObject(forEntityName: "Reflexoes", into: context) as! Reflexoes
         registro.reflexao = campoReflexao.text
-        if let d = Double(campoValor.text!) {
+        if let d = Float(campoValor.text!) {
             registro.valor = d
         }
         navigationController?.popViewController(animated: true)
@@ -36,11 +36,12 @@ class ViewControllerInfo: UIViewController, UITextViewDelegate {
     var context:NSManagedObjectContext?
     
     override func viewDidLoad() {
+        context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         campoReflexao.delegate = self
         campoReflexao.text = "Insira aqui sua reflexão"
         campoReflexao.textColor = .lightGray
-        context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }

@@ -36,6 +36,6 @@ public class CardView:UIView {
     
     public override func awakeFromNib() {
         self.layer.cornerRadius = 10
-        self.backgroundColor = #colorLiteral(red: 0.9177484512, green: 0.9122928977, blue: 0.9219421744, alpha: 0)
+        self.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 0.6794734589)
     }
 }

@@ -18,7 +18,7 @@ func createNotification(){
         print("erro notification")
     }
     
-    let notificationTitle: String = "How you doing? 😏"
+    let notificationTitle: String = "How you doing?"
     let notificationDescriptions = ["Não se esqueça de colocar as informações de hoje", "Passando por muitas tentações? Não esqueça de registrar tudo", "Sua planta está sentindo sua falta. Dê um pouco de amor para ela"]
     let notificationDescription = notificationDescriptions.randomElement()
     

@@ -39,7 +39,7 @@ class TableViewControllerHistorico: UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celula = tableView.dequeueReusableCell(withIdentifier: "Card") as! ReflexaoTableViewCell
-        celula.valor.text = "R$ " + String(historicoInfo[indexPath.row].valor)
+        celula.valor.text = "R$ " + String(historicoInfo[indexPath.row].valor).replacingOccurrences(of: ".", with: ",")
         celula.reflexoes.text = historicoInfo[indexPath.row].reflexao
         print("passou do 3")
         return celula

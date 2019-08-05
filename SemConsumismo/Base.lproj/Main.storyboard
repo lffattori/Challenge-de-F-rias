@@ -127,7 +127,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNn-5R-NXD">
-                                <rect key="frame" x="20" y="156" width="374" height="140.5"/>
+                                <rect key="frame" x="20" y="166" width="374" height="141"/>
                                 <color key="backgroundColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="9px-dt-Bpd" kind="embed" id="3vh-36-hzV"/>
@@ -141,14 +141,14 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seu jardim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndD-Fs-3zw">
-                                <rect key="frame" x="20" y="98" width="178" height="39.5"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="32"/>
+                                <rect key="frame" x="20" y="118" width="144.5" height="32"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="26"/>
                                 <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suas reflexões" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVy-Qm-b4s">
-                                <rect key="frame" x="20" y="306.5" width="235" height="39.5"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="32"/>
+                                <rect key="frame" x="20" y="312" width="191" height="32"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="26"/>
                                 <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -156,32 +156,46 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XNn-5R-NXD" firstAttribute="leading" secondItem="EW5-G2-Vqj" secondAttribute="leading" constant="20" id="18G-Ab-Ncq"/>
-                            <constraint firstItem="XNn-5R-NXD" firstAttribute="top" secondItem="EW5-G2-Vqj" secondAttribute="top" constant="68" id="4if-Vu-bve"/>
+                            <constraint firstItem="XNn-5R-NXD" firstAttribute="top" secondItem="EW5-G2-Vqj" secondAttribute="top" constant="78" id="4if-Vu-bve"/>
                             <constraint firstItem="ndD-Fs-3zw" firstAttribute="leading" secondItem="EW5-G2-Vqj" secondAttribute="leading" constant="20" id="7zC-NB-Gbv"/>
                             <constraint firstItem="XBH-k1-jSc" firstAttribute="bottom" secondItem="EW5-G2-Vqj" secondAttribute="bottom" id="GBG-qz-DYn"/>
                             <constraint firstItem="KVy-Qm-b4s" firstAttribute="leading" secondItem="EW5-G2-Vqj" secondAttribute="leading" constant="20" id="QMT-lF-AY8"/>
-                            <constraint firstItem="KVy-Qm-b4s" firstAttribute="top" secondItem="XNn-5R-NXD" secondAttribute="bottom" constant="10" id="Uy2-jT-Tn9"/>
-                            <constraint firstItem="ndD-Fs-3zw" firstAttribute="top" secondItem="EW5-G2-Vqj" secondAttribute="top" constant="10" id="bbh-Vo-CVQ"/>
+                            <constraint firstItem="KVy-Qm-b4s" firstAttribute="top" secondItem="XNn-5R-NXD" secondAttribute="bottom" constant="5" id="Uy2-jT-Tn9"/>
+                            <constraint firstItem="ndD-Fs-3zw" firstAttribute="top" secondItem="EW5-G2-Vqj" secondAttribute="top" constant="30" id="bbh-Vo-CVQ"/>
                             <constraint firstItem="XBH-k1-jSc" firstAttribute="trailing" secondItem="EW5-G2-Vqj" secondAttribute="trailing" id="gD4-Uy-233"/>
                             <constraint firstItem="EW5-G2-Vqj" firstAttribute="trailing" secondItem="XNn-5R-NXD" secondAttribute="trailing" constant="20" id="i4U-tF-j5N"/>
                             <constraint firstItem="XBH-k1-jSc" firstAttribute="leading" secondItem="EW5-G2-Vqj" secondAttribute="leading" id="qBA-ap-RUr"/>
                             <constraint firstItem="XBH-k1-jSc" firstAttribute="top" secondItem="T1l-yQ-f8b" secondAttribute="top" constant="360" id="rIt-ZT-Gos"/>
-                            <constraint firstItem="XBH-k1-jSc" firstAttribute="top" secondItem="KVy-Qm-b4s" secondAttribute="bottom" constant="14" id="v3H-C8-NFJ"/>
+                            <constraint firstItem="XBH-k1-jSc" firstAttribute="top" secondItem="KVy-Qm-b4s" secondAttribute="bottom" constant="16" id="v3H-C8-NFJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EW5-G2-Vqj"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Histórico" leftItemsSupplementBackButton="YES" id="eNi-Rh-HwW"/>
+                    <navigationItem key="navigationItem" title="Histórico" leftItemsSupplementBackButton="YES" id="eNi-Rh-HwW">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Srl-Do-xLI">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mkC-nL-XZw">
+                                <rect key="frame" x="350" y="6" width="44" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Voltar">
+                                    <color key="titleColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="botaoVoltar:" destination="KtN-jG-7DG" eventType="touchUpInside" id="vGm-Nx-OAu"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUJ-Bj-UeA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844.92753623188412" y="-848.4375"/>
+            <point key="canvasLocation" x="1755.072463768116" y="-848.4375"/>
         </scene>
         <!--Plantinha Collection View Controller-->
         <scene sceneID="ZkW-Tv-Krb">
             <objects>
                 <collectionViewController id="9px-dt-Bpd" customClass="PlantinhaCollectionViewController" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6Pz-sV-yKa">
-                        <rect key="frame" x="0.0" y="0.0" width="374" height="140.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HKJ-8L-Laa">
@@ -215,14 +229,14 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0o-9M-Uj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3066.666666666667" y="-959.59821428571422"/>
+            <point key="canvasLocation" x="3976.811594202899" y="-959.93303571428567"/>
         </scene>
         <!--Table View Controller Historico-->
         <scene sceneID="Rso-h4-k0p">
             <objects>
                 <tableViewController id="xRA-4T-wGc" customClass="TableViewControllerHistorico" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zhX-OO-aaJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="502"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -290,7 +304,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qzw-5K-bVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2056.521739130435" y="-638.16964285714278"/>
+            <point key="canvasLocation" x="2966.666666666667" y="-638.16964285714278"/>
         </scene>
         <!--View Controller Pagina Inicial-->
         <scene sceneID="tne-QT-ifu">
@@ -300,7 +314,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kl3-1e-9TM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kl3-1e-9TM">
                                 <rect key="frame" x="35" y="107" width="98" height="55"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="45"/>
                                 <color key="textColor" red="0.33158847689628601" green="0.62407392263412476" blue="0.57646816968917847" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -344,6 +358,14 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plantinha1" translatesAutoresizingMaskIntoConstraints="NO" id="qft-ku-VmH">
                                 <rect key="frame" x="103" y="398.5" width="208" height="306"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82L-xt-gBR">
+                                <rect key="frame" x="353" y="107" width="41" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Settings5"/>
+                                <connections>
+                                    <segue destination="3U3-Zj-1as" kind="presentation" id="hlK-ys-1Un"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -365,31 +387,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Voz-aU-PMA">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="reloginhoHistorico" id="I70-V1-YVm">
-                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="reloginhoHistorico" style="plain" id="I70-V1-YVm">
+                            <color key="tintColor" red="0.4549051523" green="0.45489609240000001" blue="0.45490223169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="KtN-jG-7DG" kind="show" id="T7A-qa-Aku"/>
+                                <segue destination="TKq-va-Q7S" kind="show" customClass="EsquerdaParaDireita" customModule="SemConsumismo" customModuleProvider="target" id="T7A-qa-Aku"/>
                             </connections>
                         </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Item" image="iconeQuebraDinheiroFino" id="1gI-hP-wfn">
-                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <segue destination="9Wd-jm-U08" kind="show" id="sUr-L4-Flf"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem image="Settings3" style="plain" id="VTo-b8-r6R">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PBe-81-Jkk">
-                                    <rect key="frame" x="312" y="4" width="36" height="36"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="Settings4"/>
-                                    <connections>
-                                        <segue destination="3U3-Zj-1as" kind="presentation" id="Zt4-Cb-TLM"/>
-                                    </connections>
-                                </button>
-                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="iconeQuebraDinheiroFino" style="plain" id="1gI-hP-wfn">
+                            <color key="tintColor" red="0.45490515232086182" green="0.45489609241485596" blue="0.45490223169326782" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="9Wd-jm-U08" kind="show" id="sUr-L4-Flf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="lblDinheiroNaoGasto" destination="Kl3-1e-9TM" id="OLE-Hx-7AX"/>
@@ -518,17 +527,17 @@
                                 </variation>
                             </view>
                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lxH-an-aIx">
-                                <rect key="frame" x="16" y="735" width="382" height="79"/>
+                                <rect key="frame" x="16" y="735" width="382" height="22"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6P-eO-gIv">
-                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="79"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="22"/>
                                         <state key="normal" image="naoQuebra"/>
                                         <connections>
                                             <segue destination="yVn-Uj-eHM" kind="show" id="SXA-iG-rRK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4I-Fa-wZH">
-                                        <rect key="frame" x="218.5" y="0.0" width="163.5" height="79"/>
+                                        <rect key="frame" x="218.5" y="0.0" width="163.5" height="22"/>
                                         <state key="normal" image="simQuebra"/>
                                         <connections>
                                             <segue destination="Kik-Ga-MDt" kind="show" id="Edu-60-T7H"/>
@@ -589,17 +598,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="THz-8A-gbi">
-                                <rect key="frame" x="16" y="735" width="382" height="79"/>
+                                <rect key="frame" x="16" y="735" width="382" height="22"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCz-Ds-QpV">
-                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="79"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="22"/>
                                         <state key="normal" image="naoQuebra"/>
                                         <connections>
                                             <segue destination="yVn-Uj-eHM" kind="show" id="yed-hX-dre"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01U-N7-rEq">
-                                        <rect key="frame" x="218.5" y="0.0" width="163.5" height="79"/>
+                                        <rect key="frame" x="218.5" y="0.0" width="163.5" height="22"/>
                                         <state key="normal" image="simQuebra"/>
                                         <connections>
                                             <segue destination="Aw4-GL-g94" kind="show" id="YBh-Q0-Uvw"/>
@@ -929,7 +938,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="ex: 4.56" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cek-hi-8Tx">
-                                <rect key="frame" x="65" y="210" width="268" height="26"/>
+                                <rect key="frame" x="72" y="210" width="268" height="26"/>
                                 <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
@@ -1038,6 +1047,7 @@
                             <constraint firstItem="6H5-1R-MaT" firstAttribute="centerX" secondItem="SjR-iX-AHe" secondAttribute="centerX" id="GjB-YB-UYv"/>
                             <constraint firstItem="ufz-Q1-Nab" firstAttribute="trailing" secondItem="Vi5-fd-fQZ" secondAttribute="trailing" constant="24" id="HV2-Yj-pgg"/>
                             <constraint firstItem="B8C-GP-Z6J" firstAttribute="leading" secondItem="6H5-1R-MaT" secondAttribute="leading" id="WQj-Rl-JNe"/>
+                            <constraint firstItem="xrH-bx-gSG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="B8C-GP-Z6J" secondAttribute="trailing" constant="8" symbolic="YES" id="XLy-Ic-nUR"/>
                             <constraint firstItem="xrH-bx-gSG" firstAttribute="top" secondItem="ufz-Q1-Nab" secondAttribute="top" constant="33" id="XWX-nB-645"/>
                             <constraint firstItem="B8C-GP-Z6J" firstAttribute="leading" secondItem="ufz-Q1-Nab" secondAttribute="leading" constant="29" id="XhT-KH-axA"/>
                             <constraint firstItem="6H5-1R-MaT" firstAttribute="top" secondItem="B8C-GP-Z6J" secondAttribute="bottom" constant="62" id="dfr-Cc-P14"/>
@@ -1141,7 +1151,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="57S-zz-UTn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="iXZ-KZ-AoO">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
@@ -1241,12 +1250,28 @@
             </objects>
             <point key="canvasLocation" x="4934.7826086956529" y="947.54464285714278"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kDs-7i-URm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TKq-va-Q7S" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f8D-um-D7I">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KtN-jG-7DG" kind="relationship" relationship="rootViewController" id="4O5-wB-pcU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ju-AG-N1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844.92753623188412" y="-848.4375"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Plantinha 10" width="208" height="306"/>
         <image name="Plantinha1" width="208" height="306"/>
-        <image name="Settings3" width="36" height="36"/>
-        <image name="Settings4" width="35" height="35"/>
+        <image name="Settings5" width="29" height="30"/>
         <image name="botaoComecar" width="283" height="79"/>
         <image name="iconeQuebraDinheiroFino" width="27" height="27"/>
         <image name="naoInicio" width="121" height="79"/>

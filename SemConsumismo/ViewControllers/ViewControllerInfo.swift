@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class ViewControllerInfo: UIViewController, UITextViewDelegate {
-    
+    var campoEstaVazio = true
     @IBOutlet weak var campoReflexao: UITextView!
     @IBAction func salvar(_ sender: Any) {
         guard let context = context else {
@@ -18,9 +18,14 @@ class ViewControllerInfo: UIViewController, UITextViewDelegate {
         }
         let registro = NSEntityDescription.insertNewObject(forEntityName: "Reflexoes", into: context) as! Reflexoes
         registro.reflexao = campoReflexao.text
-        if let d = Float(campoValor.text!) {
+        if let d = Float(campoValor.text!.replacingOccurrences(of: ",", with: ".")) {
             registro.valor = d
         }
+        if campoEstaVazio {
+            let alert = UIAlertController(title:"Atenção", message: "O campo para fazer as suas reflexões está vazio, faça a sua reflexão para salvar.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        } else {
         navigationController?.popViewController(animated: true)
         print ("clicked")
         do {
@@ -32,6 +37,7 @@ class ViewControllerInfo: UIViewController, UITextViewDelegate {
         }
         self.dismiss(animated: true, completion: nil)
     }
+}
     @IBOutlet weak var campoValor: UITextField!
     var context:NSManagedObjectContext?
     
@@ -59,6 +65,10 @@ class ViewControllerInfo: UIViewController, UITextViewDelegate {
         if campoReflexao.text.isEmpty {
             campoReflexao.text = "Insira aqui a sua reflexão"
             campoReflexao.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            campoEstaVazio = true
+        }
+        else{
+            campoEstaVazio = false
         }
     }
 }

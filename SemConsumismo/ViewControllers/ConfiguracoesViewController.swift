@@ -23,9 +23,10 @@ class ConfiguracoesViewController: UIViewController {
         guard let context = context else {
             return
         }
-        if let text = campoValor.text, text != "" {
+        if var text = campoValor.text, text != "" {
             let registro = NSEntityDescription.insertNewObject(forEntityName: "ValorDiario", into: context) as! ValorDiario
             print(registro)
+            text = text.replacingOccurrences(of: ",", with: ".")
             if let v = Float(text){
                 registro.valorDinheiro = v
             }

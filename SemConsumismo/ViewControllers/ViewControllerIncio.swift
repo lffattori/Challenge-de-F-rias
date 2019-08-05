@@ -14,7 +14,6 @@ class ViewControllerIncio: UIViewController {
     var context:NSManagedObjectContext?
     var dinheiroTotal:Float? = 0.0
     var gastoDiario:Float? = 0.0
-    
     var plantinhaEstado: Int32? {
         didSet {
             switch plantinhaEstado {
@@ -39,7 +38,7 @@ class ViewControllerIncio: UIViewController {
             case 10:
                 plantinhaImagem.image = #imageLiteral(resourceName: "Plantinha 10")
 //                context?.fetch(NSFetchRequest<quantidade>) as! PlantinhasCrescidas
-                var numeroPlantinhas = UserDefaults.standard.integer(forKey: "numero_plantinhas")
+                let numeroPlantinhas = UserDefaults.standard.integer(forKey: "numero_plantinhas")
                 UserDefaults.standard.set(numeroPlantinhas + 1, forKey: "numero_plantinhas")
                 print(UserDefaults.standard.integer(forKey: "numero_plantinhas"))
             default:
@@ -62,7 +61,7 @@ class ViewControllerIncio: UIViewController {
         plantinhaEstado = Int32(aux + 1)
         valorDiario?.valorTotal += gastoDiario ?? 0
         self.dinheiroTotal = valorDiario?.valorTotal ?? 0
-        lblDinheiroNaoGasto.text = String(format: "%.2f", valorDiario?.valorTotal ?? 0)
+        lblDinheiroNaoGasto.text = String(format: "%.2f", valorDiario?.valorTotal ?? 0).replacingOccurrences(of: ".", with: ",")
         lblDinheiroNaoGasto.reloadInputViews()
         self.saveData()
         }
@@ -88,7 +87,7 @@ class ViewControllerIncio: UIViewController {
         createNotification()
         context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         loadData()
-        lblDinheiroNaoGasto.text = String(format: "%.2f", valorDiario?.valorTotal ?? 0)
+        lblDinheiroNaoGasto.text = String(format: "%.2f", valorDiario?.valorTotal ?? 0).replacingOccurrences(of: ".", with: ",")
         lblDinheiroNaoGasto.reloadInputViews()
         if(plantinhaEstado == nil){
             plantinhaEstado = Int32(1)
@@ -127,7 +126,7 @@ class ViewControllerIncio: UIViewController {
 ////                    dinheiroTotal = data.value(forKey: "valorTotal") as! Double
 //                    valorDiario = data as? ValorDiario
 //                }
-            }catch{
+            }catch {
                 fatalError("404 - ValorDiario: Entity not found!")
             }
         }
@@ -183,3 +182,4 @@ class ViewControllerIncio: UIViewController {
         }
     }
 }
+

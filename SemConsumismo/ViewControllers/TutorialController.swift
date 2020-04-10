@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewControllerTutorial: UIViewController {
+class TutorialController: UIViewController {
     var pageViewController: PageViewController?
     
     @IBOutlet weak var botaoProx: UIButton!

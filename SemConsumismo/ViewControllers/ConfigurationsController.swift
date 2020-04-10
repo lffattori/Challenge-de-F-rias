@@ -9,8 +9,10 @@
 import UIKit
 import CoreData
 
-class ConfiguracoesViewController: UIViewController {
-    
+class ConfigurationsController: UIViewController {
+
+    @IBOutlet weak var costTextField: UITextField!
+
     var context:NSManagedObjectContext?
     
     override func viewDidLoad() {
@@ -19,11 +21,13 @@ class ConfiguracoesViewController: UIViewController {
         self.hideKeyboardWhenTappedAround() 
     }
     
-    @IBAction func salvarInfo(_ sender: Any) {
+    @IBAction func salveInfo(_ sender: Any) {
+
         guard let context = context else {
             return
         }
-        if var text = campoValor.text, text != "" {
+
+        if var text = costTextField.text, text != "" {
             let registro = NSEntityDescription.insertNewObject(forEntityName: "ValorDiario", into: context) as! ValorDiario
             print(registro)
             text = text.replacingOccurrences(of: ",", with: ".")
@@ -51,13 +55,10 @@ class ConfiguracoesViewController: UIViewController {
         }
         
     }
-    
-    @IBOutlet weak var campoValor: UITextField!
-    
-    
-    @IBAction func botaoCancelar(_ sender: Any) {
+
+    @IBAction func cancelButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
- 
+
 }
 

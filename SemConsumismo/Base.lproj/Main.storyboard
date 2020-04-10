@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="57S-zz-UTn">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="57S-zz-UTn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -121,13 +119,13 @@
         <!--Histórico-->
         <scene sceneID="PKH-Sa-EgB">
             <objects>
-                <viewController id="KtN-jG-7DG" customClass="ViewControllerHistoricoPage" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KtN-jG-7DG" customClass="BackButtonFromRecordsController" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T1l-yQ-f8b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNn-5R-NXD">
-                                <rect key="frame" x="20" y="166" width="374" height="141"/>
+                                <rect key="frame" x="20" y="166" width="374" height="142.5"/>
                                 <color key="backgroundColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="9px-dt-Bpd" kind="embed" id="3vh-36-hzV"/>
@@ -141,13 +139,13 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seu jardim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndD-Fs-3zw">
-                                <rect key="frame" x="20" y="118" width="144.5" height="32"/>
+                                <rect key="frame" x="20" y="118" width="124" height="30.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="26"/>
                                 <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suas reflexões" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVy-Qm-b4s">
-                                <rect key="frame" x="20" y="312" width="191" height="32"/>
+                                <rect key="frame" x="20" y="313.5" width="170.5" height="30.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="26"/>
                                 <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -180,7 +178,7 @@
                                     <color key="titleColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="botaoVoltar:" destination="KtN-jG-7DG" eventType="touchUpInside" id="vGm-Nx-OAu"/>
+                                    <action selector="backButton:" destination="KtN-jG-7DG" eventType="touchUpInside" id="vGm-Nx-OAu"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -190,12 +188,12 @@
             </objects>
             <point key="canvasLocation" x="1755.072463768116" y="-848.4375"/>
         </scene>
-        <!--Plantinha Collection View Controller-->
+        <!--Garden Collection Controller-->
         <scene sceneID="ZkW-Tv-Krb">
             <objects>
-                <collectionViewController id="9px-dt-Bpd" customClass="PlantinhaCollectionViewController" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="9px-dt-Bpd" customClass="GardenCollectionController" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6Pz-sV-yKa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="141"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HKJ-8L-Laa">
@@ -231,16 +229,16 @@
             </objects>
             <point key="canvasLocation" x="3976.811594202899" y="-959.93303571428567"/>
         </scene>
-        <!--Table View Controller Historico-->
+        <!--Records Controller-->
         <scene sceneID="Rso-h4-k0p">
             <objects>
-                <tableViewController id="xRA-4T-wGc" customClass="TableViewControllerHistorico" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="xRA-4T-wGc" customClass="RecordsController" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zhX-OO-aaJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="502"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Card" rowHeight="150" id="kg5-hc-Eno" customClass="ReflexaoTableViewCell" customModule="SemConsumismo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Card" rowHeight="150" id="kg5-hc-Eno" customClass="ReflexionCell" customModule="SemConsumismo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kg5-hc-Eno" id="48l-3g-A4M">
@@ -250,7 +248,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmN-wq-MbR" customClass="CardView" customModule="SemConsumismo" customModuleProvider="target">
                                             <rect key="frame" x="20" y="20" width="374" height="110"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tc8-73-2BE">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tc8-73-2BE">
                                                     <rect key="frame" x="10" y="46" width="354" height="26"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" id="1Ak-Br-7oB"/>
@@ -259,7 +257,7 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYh-cr-BFV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYh-cr-BFV">
                                                     <rect key="frame" x="10" y="10" width="354" height="26"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -309,15 +307,15 @@
         <!--View Controller Pagina Inicial-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="View Controller Pagina Inicial" customClass="ViewControllerIncio" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="View Controller Pagina Inicial" customClass="HomePageController" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kl3-1e-9TM">
-                                <rect key="frame" x="35" y="107" width="98" height="55"/>
+                                <rect key="frame" x="35" y="107" width="88" height="52.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="45"/>
-                                <color key="textColor" red="0.33158847689628601" green="0.62407392263412476" blue="0.57646816968917847" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.62352941176470589" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3h-GB-FrV">
@@ -327,7 +325,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dinheiro não gasto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7b4-hv-WyQ">
-                                <rect key="frame" x="27" y="160" width="162.5" height="21"/>
+                                <rect key="frame" x="27" y="160" width="143" height="20"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -343,7 +341,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você fez compras hoje?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcI-2V-tKO">
-                                <rect key="frame" x="67.5" y="720.5" width="279.5" height="28.5"/>
+                                <rect key="frame" x="83.5" y="722" width="247" height="27"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="23"/>
                                 <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -352,11 +350,11 @@
                                 <rect key="frame" x="253" y="765" width="121" height="79"/>
                                 <state key="normal" image="naoInicio"/>
                                 <connections>
-                                    <action selector="naoBotao:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iFf-BY-Czg"/>
+                                    <action selector="noButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iFf-BY-Czg"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plantinha1" translatesAutoresizingMaskIntoConstraints="NO" id="qft-ku-VmH">
-                                <rect key="frame" x="103" y="398.5" width="208" height="306"/>
+                                <rect key="frame" x="103" y="400" width="208" height="306"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82L-xt-gBR">
                                 <rect key="frame" x="353" y="107" width="41" height="45"/>
@@ -401,8 +399,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="lblDinheiroNaoGasto" destination="Kl3-1e-9TM" id="OLE-Hx-7AX"/>
-                        <outlet property="plantinhaImagem" destination="qft-ku-VmH" id="440-kh-m0U"/>
+                        <outlet property="lblSavedMoney" destination="Kl3-1e-9TM" id="OLE-Hx-7AX"/>
+                        <outlet property="plantImage" destination="qft-ku-VmH" id="440-kh-m0U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -412,7 +410,7 @@
         <!--Quebra de Impulso-->
         <scene sceneID="Ma1-dr-sqp">
             <objects>
-                <viewController id="cyM-dQ-5xu" customClass="ViewControllerQuebraDeImpulso" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cyM-dQ-5xu" customClass="BrakeImpulseController" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y74-Aj-KEg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -424,7 +422,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="627"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você quer o que está desejando comprar?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmJ-VC-tAx">
-                                        <rect key="frame" x="60" y="50" width="294" height="56.5"/>
+                                        <rect key="frame" x="60" y="50" width="294" height="54"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="26"/>
                                         <color key="textColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -436,7 +434,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que você viu te chamou atenção. mas faça a seguinte reflexão:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWZ-jc-EXW">
-                                        <rect key="frame" x="60" y="275" width="294" height="77"/>
+                                        <rect key="frame" x="60" y="277" width="294" height="73.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
                                         <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -454,7 +452,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="é algo que realmente quero?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moj-xg-doh">
-                                        <rect key="frame" x="60" y="380" width="294" height="51.5"/>
+                                        <rect key="frame" x="60" y="378.5" width="294" height="24.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
                                         <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="highlightedColor" red="0.43921875953674316" green="0.43921005725860596" blue="0.43921592831611633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -527,17 +525,17 @@
                                 </variation>
                             </view>
                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lxH-an-aIx">
-                                <rect key="frame" x="16" y="735" width="382" height="22"/>
+                                <rect key="frame" x="16" y="735" width="382" height="79"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6P-eO-gIv">
-                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="79"/>
                                         <state key="normal" image="naoQuebra"/>
                                         <connections>
                                             <segue destination="yVn-Uj-eHM" kind="show" id="SXA-iG-rRK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4I-Fa-wZH">
-                                        <rect key="frame" x="218.5" y="0.0" width="163.5" height="22"/>
+                                        <rect key="frame" x="218.5" y="0.0" width="163.5" height="79"/>
                                         <state key="normal" image="simQuebra"/>
                                         <connections>
                                             <segue destination="Kik-Ga-MDt" kind="show" id="Edu-60-T7H"/>
@@ -585,7 +583,7 @@
         <!--Quebra de Impulso-->
         <scene sceneID="C3L-Ag-LYM">
             <objects>
-                <viewController id="Kik-Ga-MDt" customClass="ViewControllerQuebraDeImpulso" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Kik-Ga-MDt" customClass="BrakeImpulseController" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eN7-f7-GNa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -598,17 +596,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="THz-8A-gbi">
-                                <rect key="frame" x="16" y="735" width="382" height="22"/>
+                                <rect key="frame" x="16" y="735" width="382" height="79"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCz-Ds-QpV">
-                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="79"/>
                                         <state key="normal" image="naoQuebra"/>
                                         <connections>
                                             <segue destination="yVn-Uj-eHM" kind="show" id="yed-hX-dre"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01U-N7-rEq">
-                                        <rect key="frame" x="218.5" y="0.0" width="163.5" height="22"/>
+                                        <rect key="frame" x="218.5" y="0.0" width="163.5" height="79"/>
                                         <state key="normal" image="simQuebra"/>
                                         <connections>
                                             <segue destination="Aw4-GL-g94" kind="show" id="YBh-Q0-Uvw"/>
@@ -624,25 +622,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="627"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você tem dinheiro para comprar o que quer?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K00-PY-P1z">
-                                        <rect key="frame" x="60" y="50" width="294" height="56.5"/>
+                                        <rect key="frame" x="60" y="50" width="294" height="54"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="23"/>
                                         <color key="textColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lembre-se: o cartão de crédito não é seu amigo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwb-WA-L9e">
-                                        <rect key="frame" x="60" y="394" width="294" height="51.5"/>
+                                        <rect key="frame" x="60" y="366.5" width="294" height="49"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
                                         <color key="textColor" red="0.43921875953674316" green="0.43921005725860596" blue="0.43921592831611633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dinheiro que você não tem" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgI-zd-kLZ">
-                                        <rect key="frame" x="60" y="334.5" width="294" height="51.5"/>
+                                        <rect key="frame" x="60" y="334" width="294" height="24.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="21"/>
                                         <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="highlightedColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Não é saudável gastar" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0i-QJ-FIA">
-                                        <rect key="frame" x="60" y="300.5" width="294" height="26"/>
+                                        <rect key="frame" x="60" y="301.5" width="294" height="24.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
                                         <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -691,7 +689,7 @@
         <!--Quebra de Impulso-->
         <scene sceneID="l9s-8K-epj">
             <objects>
-                <viewController id="Aw4-GL-g94" customClass="ViewControllerQuebraDeImpulso" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Aw4-GL-g94" customClass="BrakeImpulseController" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4S2-9Y-esc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -710,19 +708,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="627"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você precisa dessa produto?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="592-jS-32E">
-                                        <rect key="frame" x="60" y="50" width="294" height="56.5"/>
+                                        <rect key="frame" x="60" y="50" width="294" height="54"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="23"/>
                                         <color key="textColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desejo e necessidade são coisas bem diferentes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2L-i8-2w1">
-                                        <rect key="frame" x="60" y="288" width="294" height="51.5"/>
+                                        <rect key="frame" x="60" y="289" width="294" height="49"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="21"/>
                                         <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por exemplo: você precisa de água, você só quer a última coisa nova que acabou de sair" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mt-gM-JET">
-                                        <rect key="frame" x="60" y="347.5" width="294" height="102.5"/>
+                                        <rect key="frame" x="60" y="346" width="294" height="73.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
                                         <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="highlightedColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -788,7 +786,7 @@
         <!--Quebra de Impulso-->
         <scene sceneID="YqJ-62-8ed">
             <objects>
-                <viewController id="wSa-oX-9zZ" customClass="ViewControllerQuebraDeImpulso" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wSa-oX-9zZ" customClass="BrakeImpulseController" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GEG-Ep-azv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -807,19 +805,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="627"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você deveria fazer essa compra?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b10-wJ-srd">
-                                        <rect key="frame" x="60" y="50" width="294" height="56.5"/>
+                                        <rect key="frame" x="60" y="50" width="294" height="54"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="23"/>
                                         <color key="textColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pode ser só 10 reais agora, mas depois você pode precisar." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMS-BK-4bg">
-                                        <rect key="frame" x="60" y="275" width="294" height="77"/>
+                                        <rect key="frame" x="60" y="277" width="294" height="73.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
                                         <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pense bem se você deve gastar dinheiro com isso." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgo-rH-eUf">
-                                        <rect key="frame" x="60" y="360" width="294" height="51.5"/>
+                                        <rect key="frame" x="60" y="358.5" width="294" height="49"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="21"/>
                                         <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="highlightedColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -881,54 +879,54 @@
             </objects>
             <point key="canvasLocation" x="4392.753623188406" y="20.758928571428569"/>
         </scene>
-        <!--View Controller Info-->
+        <!--Imput Reflexion Controller-->
         <scene sceneID="Z1u-uJ-gym">
             <objects>
-                <viewController id="Vq8-3k-s7F" customClass="ViewControllerInfo" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vq8-3k-s7F" customClass="ImputReflexionController" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lgf-X0-xz6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reflita sobre sua compra. Como você estava se sentindo? Essa compra foi necessária?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGd-B1-yhF">
-                                <rect key="frame" x="36" y="271" width="355" height="77"/>
+                                <rect key="frame" x="36" y="268.5" width="355" height="73.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGn-oP-7dI">
-                                <rect key="frame" x="35.5" y="211" width="28.5" height="26"/>
+                                <rect key="frame" x="35.5" y="210" width="26.5" height="24.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8c-07-3U1">
-                                <rect key="frame" x="339" y="54" width="51" height="33"/>
+                                <rect key="frame" x="342" y="54" width="48" height="32"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <state key="normal" title="Salvar">
                                     <color key="titleColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="salvar:" destination="Vq8-3k-s7F" eventType="touchUpInside" id="g5R-5y-pYd"/>
+                                    <action selector="save:" destination="Vq8-3k-s7F" eventType="touchUpInside" id="g5R-5y-pYd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFa-MK-ufr">
-                                <rect key="frame" x="24" y="54" width="75" height="33"/>
+                                <rect key="frame" x="24" y="54" width="68" height="32"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <state key="normal" title="Cancelar">
                                     <color key="titleColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="botaoCancelar:" destination="Vq8-3k-s7F" eventType="touchUpInside" id="2bl-fk-VCz"/>
+                                    <action selector="cancelButton:" destination="Vq8-3k-s7F" eventType="touchUpInside" id="2bl-fk-VCz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual foi o valor?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIo-m0-s5o">
-                                <rect key="frame" x="121.5" y="136" width="171" height="26"/>
+                                <rect key="frame" x="130.5" y="136" width="153.5" height="24.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="U5k-Fd-Zm5">
-                                <rect key="frame" x="65" y="388" width="294" height="162"/>
+                                <rect key="frame" x="65" y="382" width="294" height="162"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="H58-mS-bn3"/>
@@ -966,51 +964,51 @@
                         <viewLayoutGuide key="safeArea" id="4SV-ih-NLh"/>
                     </view>
                     <connections>
-                        <outlet property="campoReflexao" destination="U5k-Fd-Zm5" id="sM1-pC-OAR"/>
-                        <outlet property="campoValor" destination="cek-hi-8Tx" id="phN-il-jIH"/>
+                        <outlet property="costTextField" destination="cek-hi-8Tx" id="phN-il-jIH"/>
+                        <outlet property="reflexionTextField" destination="U5k-Fd-Zm5" id="sM1-pC-OAR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GaI-Oj-ocl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="576.81159420289862" y="812.94642857142856"/>
         </scene>
-        <!--Configuracoes View Controller-->
+        <!--Configurations Controller-->
         <scene sceneID="rIt-ji-ChS">
             <objects>
-                <viewController id="3U3-Zj-1as" customClass="ConfiguracoesViewController" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3U3-Zj-1as" customClass="ConfigurationsController" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SjR-iX-AHe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8C-GP-Z6J">
-                                <rect key="frame" x="24" y="54" width="75" height="33"/>
+                                <rect key="frame" x="24" y="10" width="68" height="32"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <state key="normal" title="Cancelar">
                                     <color key="titleColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="botaoCancelar:" destination="3U3-Zj-1as" eventType="touchUpInside" id="BVu-bs-JgD"/>
+                                    <action selector="cancelButton:" destination="3U3-Zj-1as" eventType="touchUpInside" id="BVu-bs-JgD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suas informações" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6H5-1R-MaT">
-                                <rect key="frame" x="88.5" y="110" width="237.5" height="32"/>
+                                <rect key="frame" x="102.5" y="65" width="209" height="30.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="26"/>
                                 <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrH-bx-gSG">
-                                <rect key="frame" x="339" y="54" width="51" height="33"/>
+                                <rect key="frame" x="342" y="10" width="48" height="32"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <state key="normal" title="Salvar">
                                     <color key="titleColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="salvar:" destination="Vq8-3k-s7F" eventType="touchUpInside" id="pwd-XB-f4R"/>
-                                    <action selector="salvarInfo:" destination="3U3-Zj-1as" eventType="touchUpInside" id="OG0-Wi-Qjn"/>
+                                    <action selector="salveInfo:" destination="3U3-Zj-1as" eventType="touchUpInside" id="OG0-Wi-Qjn"/>
+                                    <action selector="save:" destination="Vq8-3k-s7F" eventType="touchUpInside" id="pwd-XB-f4R"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quanto você gasta em compras por dia?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vi5-fd-fQZ">
-                                <rect key="frame" x="24" y="166" width="366" height="51.5"/>
+                                <rect key="frame" x="24" y="119.5" width="366" height="49"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -1023,13 +1021,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V40-Fw-2ZU">
-                                <rect key="frame" x="51" y="275" width="28.5" height="26"/>
+                                <rect key="frame" x="51" y="226" width="26.5" height="24.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="ex: 37.75" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9DB-Gg-iJa">
-                                <rect key="frame" x="87.5" y="275" width="88.5" height="26"/>
+                                <rect key="frame" x="85.5" y="226" width="86.5" height="26"/>
                                 <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
@@ -1084,17 +1082,17 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="campoValor" destination="9DB-Gg-iJa" id="C8g-Nw-JIQ"/>
+                        <outlet property="costTextField" destination="9DB-Gg-iJa" id="C8g-Nw-JIQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Fm-Pz-Ib3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1689.8550724637682" y="819.64285714285711"/>
         </scene>
-        <!--View Controller Respostas-->
+        <!--End Of Breake Impulse Quiz-->
         <scene sceneID="345-KY-cNc">
             <objects>
-                <viewController id="yVn-Uj-eHM" customClass="ViewControllerRespostas" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yVn-Uj-eHM" customClass="EndOfBreakeImpulseQuiz" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uIb-T6-TKF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1103,13 +1101,13 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="696.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Melhor não comprar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ie-7w-hsU">
-                                <rect key="frame" x="34" y="152" width="346" height="32"/>
+                                <rect key="frame" x="34" y="152" width="346" height="30.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="26"/>
                                 <color key="textColor" red="0.80246543884277344" green="0.41904845833778381" blue="0.47450822591781616" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aR5-QU-RpE">
-                                <rect key="frame" x="60" y="232" width="294" height="179.5"/>
+                                <rect key="frame" x="60" y="230.5" width="294" height="147"/>
                                 <string key="text">Por mais tentador que seja, não gaste esse dinheiro agora. Você pode guardar esse dinheiro, investir ou fazer uma doação. Não gaste esse dinheiro desnecessamente.</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1136,7 +1134,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Pronto" id="99b-N2-DO8">
                             <color key="tintColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <action selector="botaoPronto:" destination="yVn-Uj-eHM" id="COp-o1-2Re"/>
+                                <action selector="doneButton:" destination="yVn-Uj-eHM" id="COp-o1-2Re"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1151,6 +1149,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="57S-zz-UTn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="iXZ-KZ-AoO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
@@ -1163,10 +1162,10 @@
             </objects>
             <point key="canvasLocation" x="-81" y="20"/>
         </scene>
-        <!--View Controller Respostas-->
+        <!--End Of Breake Impulse Quiz-->
         <scene sceneID="Hsa-h6-RKD">
             <objects>
-                <viewController id="yHf-zM-Scl" customClass="ViewControllerRespostas" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yHf-zM-Scl" customClass="EndOfBreakeImpulseQuiz" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ctI-kn-cD9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1188,7 +1187,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Pronto" id="fwx-DA-lNG">
                             <color key="tintColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <action selector="botaoPronto:" destination="yHf-zM-Scl" id="kbf-Ku-MSI"/>
+                                <action selector="doneButton:" destination="yHf-zM-Scl" id="kbf-Ku-MSI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1197,10 +1196,10 @@
             </objects>
             <point key="canvasLocation" x="4155.072463768116" y="947.54464285714278"/>
         </scene>
-        <!--View Controller Respostas-->
+        <!--End Of Breake Impulse Quiz-->
         <scene sceneID="xw0-Uw-BsK">
             <objects>
-                <viewController id="E6j-AG-Owu" customClass="ViewControllerRespostas" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="E6j-AG-Owu" customClass="EndOfBreakeImpulseQuiz" customModule="SemConsumismo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g3c-yG-luh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1209,13 +1208,13 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="696.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pode comprar!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOg-S2-iJ7">
-                                <rect key="frame" x="60" y="160" width="294" height="32"/>
+                                <rect key="frame" x="60" y="160" width="294" height="30.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="26"/>
                                 <color key="textColor" red="0.58367264269999997" green="0.75221920009999999" blue="0.45485001800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTo-Pp-i7y">
-                                <rect key="frame" x="60" y="264" width="294" height="179.5"/>
+                                <rect key="frame" x="60" y="262.5" width="294" height="171.5"/>
                                 <string key="text">Depois de ter passado por todo esse processo de quebra de impulso e racionalização da compra, você está conscinete da sua escolha e vai tomar uma decisão bem mais saudável.</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="21"/>
                                 <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1241,7 +1240,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Pronto" id="y4c-VJ-0af">
                             <color key="tintColor" red="0.33158847689999998" green="0.62407392260000005" blue="0.57646816970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <action selector="botaoPronto:" destination="E6j-AG-Owu" id="lOd-Wc-qle"/>
+                                <action selector="doneButton:" destination="E6j-AG-Owu" id="lOd-Wc-qle"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1256,6 +1255,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TKq-va-Q7S" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f8D-um-D7I">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1268,6 +1268,9 @@
             <point key="canvasLocation" x="844.92753623188412" y="-848.4375"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="SXA-iG-rRK"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Plantinha 10" width="208" height="306"/>
         <image name="Plantinha1" width="208" height="306"/>
@@ -1281,7 +1284,4 @@
         <image name="simInicio" width="84" height="55"/>
         <image name="simQuebra" width="121" height="79"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Ai0-h3-LUi"/>
-    </inferredMetricsTieBreakers>
 </document>

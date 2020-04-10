@@ -17,7 +17,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         
     }()
     var indiceAtual = 0
-    var tutorialViewController:ViewControllerTutorial?
+    var tutorialViewController:TutorialController?
     
     func novaViewController(viewController: String) -> UIViewController {
         return UIStoryboard(name: "Tutorial", bundle: nil).instantiateViewController(withIdentifier: viewController)

@@ -9,19 +9,23 @@
 import UIKit
 import CoreData
 
-class ViewControllerInfo: UIViewController, UITextViewDelegate {
-    var campoEstaVazio = true
-    @IBOutlet weak var campoReflexao: UITextView!
-    @IBAction func salvar(_ sender: Any) {
+class ImputReflexionController: UIViewController, UITextViewDelegate {
+    var fieldIsEmpity = true
+    var context:NSManagedObjectContext?
+
+    @IBOutlet weak var reflexionTextField: UITextView!
+    @IBOutlet weak var costTextField: UITextField!
+
+    @IBAction func save(_ sender: Any) {
         guard let context = context else {
             return
         }
         let registro = NSEntityDescription.insertNewObject(forEntityName: "Reflexoes", into: context) as! Reflexoes
-        registro.reflexao = campoReflexao.text
-        if let d = Float(campoValor.text!.replacingOccurrences(of: ",", with: ".")) {
+        registro.reflexao = reflexionTextField.text
+        if let d = Float(costTextField.text!.replacingOccurrences(of: ",", with: ".")) {
             registro.valor = d
         }
-        if campoEstaVazio {
+        if fieldIsEmpity {
             let alert = UIAlertController(title:"Atenção", message: "O campo para fazer as suas reflexões está vazio, faça a sua reflexão para salvar.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
             present(alert, animated: true, completion: nil)
@@ -38,37 +42,33 @@ class ViewControllerInfo: UIViewController, UITextViewDelegate {
         self.dismiss(animated: true, completion: nil)
     }
 }
-    @IBOutlet weak var campoValor: UITextField!
-    var context:NSManagedObjectContext?
-    
+
     override func viewDidLoad() {
-        context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-        campoReflexao.delegate = self
-        campoReflexao.text = "Insira aqui sua reflexão"
-        campoReflexao.textColor = .lightGray
-        
+        reflexionTextField.delegate = self
+        reflexionTextField.text = "Insira aqui sua reflexão"
+        reflexionTextField.textColor = .lightGray
+        context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         // Do any additional setup after loading the view.
     }
-    @IBAction func botaoCancelar(_ sender: Any) {
+    @IBAction func cancelButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if campoReflexao.textColor == UIColor.lightGray {
-            campoReflexao.text = nil
-            campoReflexao.textColor = #colorLiteral(red: 0.4391747117, green: 0.4392418861, blue: 0.4391601086, alpha: 1)
+        if reflexionTextField.textColor == UIColor.lightGray {
+            reflexionTextField.text = nil
+            reflexionTextField.textColor = #colorLiteral(red: 0.4391747117, green: 0.4392418861, blue: 0.4391601086, alpha: 1)
         }
     }
     func textViewDidEndEditing(_ textView: UITextView) {
-        if campoReflexao.text.isEmpty {
-            campoReflexao.text = "Insira aqui a sua reflexão"
-            campoReflexao.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-            campoEstaVazio = true
-        }
-        else{
-            campoEstaVazio = false
+        if reflexionTextField.text.isEmpty {
+            reflexionTextField.text = "Insira aqui a sua reflexão"
+            reflexionTextField.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            fieldIsEmpity = true
+        } else {
+            fieldIsEmpity = false
         }
     }
 }

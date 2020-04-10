@@ -49,25 +49,25 @@ class HomePageController: UIViewController {
     }
     var dailyExpense: ValorDiario?
     var plantinha: Plantinha?
-    
-    @IBAction func noButton(_ sender: Any) {
-        let aux = Int(plantState!)
-        if dailyExpense == nil {
-            let alert = UIAlertController (title: "Atenção", message: "Você ainda não tem nenhum valor salvo. Vá nas configurações ⚙️ e coloque o quanto você gasta por dia ", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(oktapped) in self.dismiss(animated: true, completion: nil)}))
-            self.present(alert, animated: true, completion: nil)
-        } else {
-        plantState = Int32(aux + 1)
-        dailyExpense?.valorTotal += dailyExpenses ?? 0
-        self.totalSaved = dailyExpense?.valorTotal ?? 0
-        lblSavedMoney.text = String(format: "%.2f", dailyExpense?.valorTotal ?? 0).replacingOccurrences(of: ".", with: ",")
-        lblSavedMoney.reloadInputViews()
-        self.saveData()
-        }
-        
-    }
+
     @IBOutlet weak var lblSavedMoney: UILabel!
     @IBOutlet weak var plantImage: UIImageView!
+    @IBAction func noButton(_ sender: Any) {
+           let aux = Int(plantState!)
+           if dailyExpense == nil {
+               let alert = UIAlertController (title: "Atenção", message: "Você ainda não tem nenhum valor salvo. Vá nas configurações ⚙️ e coloque o quanto você gasta por dia ", preferredStyle: .alert)
+               alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(oktapped) in self.dismiss(animated: true, completion: nil)}))
+               self.present(alert, animated: true, completion: nil)
+           } else {
+           plantState = Int32(aux + 1)
+           dailyExpense?.valorTotal += dailyExpenses ?? 0
+           self.totalSaved = dailyExpense?.valorTotal ?? 0
+           lblSavedMoney.text = String(format: "%.2f", dailyExpense?.valorTotal ?? 0).replacingOccurrences(of: ".", with: ",")
+           lblSavedMoney.reloadInputViews()
+           self.saveData()
+           }
+
+       }
 
     override func viewDidLoad() {
         super.viewDidLoad()
